@@ -1,0 +1,367 @@
+import os
+import re
+import sys
+import time
+import datetime
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+
+# UTF-8出力の設定 (Windows用)
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
+SCOPES = ["https://www.googleapis.com/auth/youtube"]
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+CREDENTIALS_FILE = os.path.join(SCRIPT_DIR, "credentials.json")
+TOKEN_FILE = os.path.join(SCRIPT_DIR, "token.json")
+
+# 固定的要件定義
+CHANNEL_HANDLE = "tvtokyobiz"
+CHANNEL_QUERY = "テレ東BIZ ダイジェスト"
+TARGET_PLAYLIST_NAME = "テレ東短動画リスト"
+MAX_DURATION_SECONDS = 120          # 2分（120秒）以下
+EXCLUDE_KEYWORDS = ["天気"]          # 「天気」を含む動画を除外
+MIN_PUBLISH_DATE_STR = "2026-10-01T00:00:00Z"  # 2026/10/01 以降の動画のみ対象
+MAX_PLAYLIST_CAPACITY = 500         # 再生リストの最大保持件数（500件）
+
+def get_youtube_service(allow_interactive=True):
+    """OAuth認証を行い、YouTube APIサービスオブジェクトを取得します。"""
+    creds = None
+    if os.path.exists(TOKEN_FILE):
+        try:
+            creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
+        except Exception as e:
+            print(f"[警告] トークン読み込みエラー: {e}")
+            creds = None
+
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            try:
+                creds.refresh(Request())
+            except Exception as e:
+                print(f"[警告] トークン再更新エラー: {e}。再認証を行います。")
+                creds = None
+
+        if not creds or not creds.valid:
+            if not allow_interactive:
+                raise RuntimeError("OAuth認証トークンが無効または存在しません。インタラクティブ認証をスキップします。")
+            if not os.path.exists(CREDENTIALS_FILE):
+                raise FileNotFoundError(f"[エラー] '{CREDENTIALS_FILE}' が見つかりません。")
+            if os.path.exists(TOKEN_FILE):
+                try:
+                    os.remove(TOKEN_FILE)
+                except Exception:
+                    pass
+            flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
+            print("🔑 ブラウザを開いて Google アカウント認証を行います...")
+            creds = flow.run_local_server(port=0)
+
+        with open(TOKEN_FILE, "w", encoding="utf-8") as token:
+            token.write(creds.to_json())
+
+    return build("youtube", "v3", credentials=creds)
+
+def parse_iso8601_duration(duration_str):
+    """ISO 8601形式の動画時間を秒数に変換します。"""
+    pattern = re.compile(r'PT(?:(?P<hours>\d+)H)?(?:(?P<minutes>\d+)M)?(?:(?P<seconds>\d+)S)?')
+    match = pattern.match(duration_str)
+    if not match:
+        return 0
+    parts = match.groupdict()
+    hours = int(parts['hours'] or 0)
+    minutes = int(parts['minutes'] or 0)
+    seconds = int(parts['seconds'] or 0)
+    return hours * 3600 + minutes * 60 + seconds
+
+def format_seconds(seconds):
+    """秒数を mm:ss 形式に整形します。"""
+    m, s = divmod(seconds, 60)
+    return f"{m}分{s:02d}秒"
+
+def get_channel_uploads_id(youtube):
+    """「テレ東BIZ ダイジェスト」のアップロード動画再生リストID（UU...）を取得します。"""
+    # 1. ハンドル @tvtokyobiz
+    try:
+        res = youtube.channels().list(
+            forHandle=CHANNEL_HANDLE,
+            part="snippet,contentDetails"
+        ).execute()
+        items = res.get("items", [])
+        if items:
+            ch_title = items[0]["snippet"]["title"]
+            uploads_id = items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+            print(f"✓ チャンネル検出 [@{CHANNEL_HANDLE}]: 『{ch_title}』")
+            return uploads_id
+    except Exception:
+        pass
+
+    # 2. 検索クエリ fallback
+    try:
+        res = youtube.search().list(
+            q=CHANNEL_QUERY,
+            type="channel",
+            part="snippet",
+            maxResults=1
+        ).execute()
+        items = res.get("items", [])
+        if items:
+            ch_id = items[0]["snippet"]["channelId"]
+            ch_title = items[0]["snippet"]["title"]
+            uploads_id = "UU" + ch_id[2:]
+            print(f"✓ チャンネル検出 [{CHANNEL_QUERY}]: 『{ch_title}』")
+            return uploads_id
+    except Exception as e:
+        print(f"❌ チャンネル検出失敗: {e}")
+
+    return None
+
+def get_or_create_target_playlist(youtube):
+    """再生リスト 『ニュース』 を取得または作成し、限定公開(unlisted)に設定します。"""
+    next_page_token = None
+    while True:
+        request = youtube.playlists().list(
+            part="snippet,status",
+            mine=True,
+            maxResults=50,
+            pageToken=next_page_token
+        )
+        response = request.execute()
+        for item in response.get("items", []):
+            if item["snippet"]["title"].strip().lower() == TARGET_PLAYLIST_NAME.strip().lower():
+                pid = item["id"]
+                # 公開設定を限定公開 (unlisted) に確保
+                if item.get("status", {}).get("privacyStatus") != "unlisted":
+                    try:
+                        youtube.playlists().update(
+                            part="snippet,status",
+                            body={
+                                "id": pid,
+                                "snippet": {
+                                    "title": TARGET_PLAYLIST_NAME,
+                                    "description": "テレ東BIZダイジェストの2分以下短尺ニュース（限定公開・共有用）"
+                                },
+                                "status": {
+                                    "privacyStatus": "unlisted"
+                                }
+                            }
+                        ).execute()
+                        print(f"✓ 再生リスト 『{TARGET_PLAYLIST_NAME}』 の公開設定を『限定公開 (unlisted)』に変更しました。")
+                    except Exception as e:
+                        print(f"⚠️ 公開設定の更新スキップ: {e}")
+                print(f"✓ 再生リスト 『{TARGET_PLAYLIST_NAME}』 を検出しました (ID: {pid})")
+                return pid
+        next_page_token = response.get("nextPageToken")
+        if not next_page_token:
+            break
+
+    # 無い場合は作成
+    print(f"ℹ️ 再生リスト 『{TARGET_PLAYLIST_NAME}』 を新規作成（限定公開）します...")
+    created = youtube.playlists().insert(
+        part="snippet,status",
+        body={
+            "snippet": {
+                "title": TARGET_PLAYLIST_NAME,
+                "description": "テレ東BIZダイジェストの2分以下短尺ニュース（限定公開・共有用）"
+            },
+            "status": {
+                "privacyStatus": "unlisted"
+            }
+        }
+    ).execute()
+    print(f"✨ 再生リスト 『{TARGET_PLAYLIST_NAME}』 を作成しました！ (ID: {created['id']})")
+    return created["id"]
+
+def fetch_playlist_items(youtube, playlist_id):
+    """再生リスト内の全アイテム（playlistItemId, videoId, position）を取得します。"""
+    items = []
+    next_page_token = None
+    while True:
+        try:
+            request = youtube.playlistItems().list(
+                part="snippet",
+                playlistId=playlist_id,
+                maxResults=50,
+                pageToken=next_page_token
+            )
+            response = request.execute()
+            for item in response.get("items", []):
+                items.append({
+                    "playlistItemId": item["id"],
+                    "videoId": item["snippet"]["resourceId"]["videoId"],
+                    "title": item["snippet"]["title"],
+                    "position": item["snippet"]["position"]
+                })
+            next_page_token = response.get("nextPageToken")
+            if not next_page_token:
+                break
+        except HttpError as e:
+            # 新規作成直後や動画数0の再生リストで404エラーが発生した場合は空リストを返す
+            if "playlistNotFound" in str(e) or e.resp.status == 404:
+                return []
+            raise e
+    return items
+
+def cleanup_playlist_capacity(youtube, playlist_id):
+    """再生リストの件数が500件を超えている場合、古い動画から順番に自動削除します。"""
+    items = fetch_playlist_items(youtube, playlist_id)
+    if not items:
+        return
+
+    if len(items) > MAX_PLAYLIST_CAPACITY:
+        excess = len(items) - MAX_PLAYLIST_CAPACITY
+        print(f"\n⚠️ 再生リストの件数 ({len(items)}件) が最大容量 ({MAX_PLAYLIST_CAPACITY}件) を超えています。")
+        print(f"古い動画から {excess} 件を自動削除します...")
+
+        old_items_to_delete = items[:excess]
+        for item in old_items_to_delete:
+            try:
+                youtube.playlistItems().delete(id=item["playlistItemId"]).execute()
+                print(f"  - 削除（500件容量上限超過）: {item['title']}")
+                time.sleep(0.3)
+            except Exception as e:
+                print(f"  ❌ 削除失敗: {item['title']} ({e})")
+
+def main():
+    print("=" * 65)
+    print(" テレ東BIZ ダイジェスト ニュース再生リスト自動同期 ")
+    print(f" 実行日時: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("=" * 65)
+
+    try:
+        youtube = get_youtube_service()
+        print("✓ OAuth 認証成功")
+    except Exception as e:
+        print(f"❌ 認証エラー: {e}")
+        return
+
+    # 1. ターゲット再生リスト「ニュース」の準備
+    try:
+        playlist_id = get_or_create_target_playlist(youtube)
+    except HttpError as e:
+        if "quotaExceeded" in str(e):
+            print("🛑 API本日の上限(10,000 units)に達しました。明日16時以降に再開されます。")
+            return
+        raise e
+
+    # 2. 40件上限超過分の古い動画整理
+    try:
+        cleanup_playlist_capacity(youtube, playlist_id)
+    except HttpError as e:
+        if "quotaExceeded" in str(e):
+            print("🛑 本日の API 利用上限 (10,000 units) に達しました。本日16時以降に再開されます。")
+            print(f"🔗 共有用URL (限定公開): https://www.youtube.com/playlist?list={playlist_id}")
+            return
+        raise e
+
+    # 3. 既存の登録動画IDリストを取得（重複防止用）
+    existing_items = fetch_playlist_items(youtube, playlist_id)
+    existing_video_ids = {item["videoId"] for item in existing_items}
+
+    # 4. 「テレ東BIZ ダイジェスト」の新着動画を取得
+    uploads_id = get_channel_uploads_id(youtube)
+    if not uploads_id:
+        print("❌ アップロード再生リストが取得できませんでした。")
+        return
+
+    res = youtube.playlistItems().list(
+        part="snippet",
+        playlistId=uploads_id,
+        maxResults=50
+    ).execute()
+
+    recent_items = res.get("items", [])
+    video_ids = [item["snippet"]["resourceId"]["videoId"] for item in recent_items]
+    if not video_ids:
+        print("新着動画はありませんでした。")
+        return
+
+    # 動画の詳細情報（再生時間、公開日時）を一括取得
+    vid_response = youtube.videos().list(
+        part="snippet,contentDetails",
+        id=",".join(video_ids)
+    ).execute()
+
+    min_publish_dt = datetime.datetime.fromisoformat(MIN_PUBLISH_DATE_STR.replace("Z", "+00:00"))
+    matched_videos = []
+
+    print("\n--- 新着動画チェック判定 ---")
+    for item in vid_response.get("items", []):
+        v_id = item["id"]
+        title = item["snippet"]["title"]
+        published_at_str = item["snippet"]["publishedAt"]
+        published_dt = datetime.datetime.fromisoformat(published_at_str.replace("Z", "+00:00"))
+
+        duration_iso = item.get("contentDetails", {}).get("duration", "PT0S")
+        duration_sec = parse_iso8601_duration(duration_iso)
+        duration_str = format_seconds(duration_sec)
+
+        # 条件1: 2026/10/01 以降の動画か
+        if published_dt < min_publish_dt:
+            print(f"  ⏭️ スキップ (2026/10/01以前の動画: {published_at_str[:10]}): {title}")
+            continue
+
+        # 条件2: すでに「ニュース」再生リストに存在するか
+        if v_id in existing_video_ids:
+            print(f"  ⏭️ スキップ (追加済み): [{duration_str}] {title}")
+            continue
+
+        # 条件3: 長さが 2分 (120秒) 以下か (1秒〜120秒)
+        if duration_sec <= 0 or duration_sec > MAX_DURATION_SECONDS:
+            print(f"  ⏭️ スキップ (2分超過または配信予定: {duration_str}): {title}")
+            continue
+
+        # 条件4: 除外キーワード「天気」が含まれていないか
+        if any(kw in title for kw in EXCLUDE_KEYWORDS):
+            print(f"  ⏭️ スキップ (NGワード「天気」検出): {title}")
+            continue
+
+        matched_videos.append({
+            "id": v_id,
+            "title": title,
+            "duration_str": duration_str,
+            "published_at": published_at_str
+        })
+        print(f"  🎯 追加対象ヒット! [{duration_str}] ({published_at_str[:10]}) {title}")
+
+    if not matched_videos:
+        print("\n追加対象の新しいニュース動画はありませんでした。")
+        return
+
+    print(f"\n[実行中] {len(matched_videos)} 件の動画を再生リスト 『{TARGET_PLAYLIST_NAME}』 に追加します...")
+    added_count = 0
+    for v in matched_videos:
+        time.sleep(0.5)
+        try:
+            youtube.playlistItems().insert(
+                part="snippet",
+                body={
+                    "snippet": {
+                        "playlistId": playlist_id,
+                        "resourceId": {
+                            "kind": "youtube#video",
+                            "videoId": v["id"]
+                        }
+                    }
+                }
+            ).execute()
+            print(f"  ✓ 追加完了 [{v['duration_str']}]: {v['title']}")
+            added_count += 1
+        except HttpError as e:
+            if "quotaExceeded" in str(e):
+                print("\n🛑 API本日の上限に達したため、残りの追加を中断します。")
+                break
+            else:
+                print(f"  ❌ 追加失敗: {v['title']} ({e})")
+
+    print(f"\n✨ 完了: {added_count} 件の短尺ニュースを 『{TARGET_PLAYLIST_NAME}』 に追加しました！")
+    print(f"🔗 共有用URL (限定公開): https://www.youtube.com/playlist?list={playlist_id}")
+
+if __name__ == "__main__":
+    main()

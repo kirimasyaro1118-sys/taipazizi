@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>テレ東BIZ 2分以下ニュース再生リスト</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --card-border: #e2e8f0;
+      --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --txbiz-red: #e60012;
+      --txbiz-red-hover: #cc0010;
+      --txbiz-red-light: #fff5f5;
+      --txbiz-red-border: #ffcdd2;
+      --accent-dark: #b71c1c;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --success: #10b981;
+      --badge-bg: #1e293b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Outfit', 'Noto Sans JP', sans-serif;
+      background-color: var(--bg-main);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(230, 0, 18, 0.04) 0px, transparent 40%),
+        radial-gradient(at 100% 100%, rgba(230, 0, 18, 0.03) 0px, transparent 40%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 14px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #e60012, #c8000a);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: white;
+      box-shadow: 0 4px 14px rgba(230, 0, 18, 0.3);
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .brand-icon:active {
+      transform: scale(0.92);
+    }
+
+    .brand-text h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-text p {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    .hero-banner {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-top: 4px solid var(--txbiz-red);
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-bottom: 24px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .hero-banner h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-play-all {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 440px;
+      padding: 16px 28px;
+      border-radius: 16px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #e60012, #b71c1c);
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(230, 0, 18, 0.35);
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    .btn-play-all:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(230, 0, 18, 0.45);
+      background: linear-gradient(135deg, #ff1a2d, #c8000a);
+    }
+
+    .btn-play-all:active {
+      transform: scale(0.98);
+    }
+
+    .notice-banner {
+      background: #fff8f6;
+      border: 1px solid #ffccba;
+      color: #c0392b;
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .filter-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .filter-toggle input {
+      accent-color: var(--txbiz-red);
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .btn-small {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 7px 16px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-small:hover {
+      border-color: var(--txbiz-red-border);
+      color: var(--txbiz-red);
+      background: var(--txbiz-red-light);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .video-card {
+      background: var(--bg-card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      position: relative;
+    }
+
+    .video-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--txbiz-red-border);
+      box-shadow: 0 10px 25px rgba(230, 0, 18, 0.1);
+    }
+
+    .video-card.watched {
+      opacity: 0.65;
+      background: #f1f5f9;
+    }
+
+    .thumb-box {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: #0f172a;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .thumb-box:hover .thumb-img {
+      transform: scale(1.04);
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.95;
+    }
+
+    .play-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(230, 0, 18, 0.92);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 22px;
+      padding-left: 3px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .thumb-box:hover .play-icon {
+      transform: scale(1.12);
+      background: #e60012;
+    }
+
+    .dur-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .watched-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(16, 185, 129, 0.92);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .card-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .video-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .btn-toggle-read {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--txbiz-red);
+      transition: color 0.2s ease;
+    }
+
+    .btn-toggle-read:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    .card-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-mark-up-to {
+      width: 100%;
+      background: var(--txbiz-red-light);
+      border: 1px solid var(--txbiz-red-border);
+      color: var(--txbiz-red);
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-mark-up-to:hover {
+      background: var(--txbiz-red);
+      color: white;
+      border-color: var(--txbiz-red);
+    }
+
+    /* Secret Visitor Counter Modal */
+    .secret-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .secret-modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .secret-modal {
+      background: #ffffff;
+      border: 2px solid var(--txbiz-red);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 420px;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(230, 0, 18, 0.25);
+      transform: translateY(20px) scale(0.95);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .secret-modal-overlay.active .secret-modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .secret-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 12px;
+    }
+
+    .secret-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--txbiz-red);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .secret-close {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+    }
+
+    .secret-stat-card {
+      background: var(--txbiz-red-light);
+      border: 1px dashed var(--txbiz-red-border);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .secret-stat-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .secret-stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--txbiz-red);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .secret-sub-stats {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .secret-sub-card {
+      flex: 1;
+      background: var(--bg-main);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .secret-sub-card label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .secret-sub-card span {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .secret-footer-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon" id="tvBrandIcon" onclick="handleTvIconClick()">📺</div>
+        <div class="brand-text">
+          <h1>タイパ時事履修</h1>
+          <p>YouTube連携・視聴同期機能付きダイジェスト</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <div id="noticeBanner" class="notice-banner"></div>
+
+    <div class="hero-banner">
+      <h2>テレ東BIZ 2分以下ニュース再生リスト</h2>
+      <button class="btn-play-all" onclick="openUnwatchedInYouTube()">
+        <span>▶ 続きから再生</span>
+      </button>
+    </div>
+
+    <div class="controls-bar">
+      <label class="filter-toggle">
+        <input type="checkbox" id="hideWatchedToggle" onchange="renderGrid()">
+        <span>未視聴のみ表示</span>
+      </label>
+
+      <button class="btn-small" onclick="resetWatchHistory()">
+        視聴履歴をリセット
+      </button>
+    </div>
+
+    <div class="video-grid" id="videoGrid">
+      <!-- Dynamic Video Cards -->
+    </div>
+
+  </div>
+
+  <!-- Secret Visitor Counter Modal -->
+  <div class="secret-modal-overlay" id="secretCounterOverlay" onclick="if(event.target===this) toggleSecretCounterModal(false)">
+    <div class="secret-modal">
+      <div class="secret-header">
+        <div class="secret-title">
+          <span>📊 シークレット解析・アクセス統計</span>
+        </div>
+        <button class="secret-close" onclick="toggleSecretCounterModal(false)">✕</button>
+      </div>
+
+      <div class="secret-stat-card">
+        <div class="secret-stat-label">👀 総来訪者数 (Total Pageviews)</div>
+        <div class="secret-stat-number" id="secretGlobalCount">ー</div>
+      </div>
+
+      <div class="secret-sub-stats">
+        <div class="secret-sub-card">
+          <label>💻 端末内アクセス数</label>
+          <span id="secretLocalCount">ー</span>
+        </div>
+        <div class="secret-sub-card">
+          <label>🔒 ステータス</label>
+          <span style="color: var(--success); font-size: 0.9rem;">アクティブ</span>
+        </div>
+      </div>
+
+      <p class="secret-footer-note">
+        ※ この統計画面は、ヘッダーのテレビアイコン (📺) を 5 回連打したときのみ表示されるシークレット機能です。
+      </p>
+    </div>
+  </div>
+
+  <script>
+    let allVideos = [];
+    let playlistId = 'PLFWKlyTx2vW4';
+    const WATCHED_KEY = 'txbiz_watched_videos_v1';
+    
+    // Secret Counter Variables
+    let tvClickCount = 0;
+    let tvClickTimer = null;
+    let totalVisits = 0;
+    let localVisits = 0;
+
+    function handleTvIconClick() {
+      tvClickCount++;
+      const icon = document.getElementById('tvBrandIcon');
+      
+      // Visual tap animation
+      icon.style.transform = 'scale(1.22)';
+      setTimeout(() => {
+        icon.style.transform = '';
+      }, 150);
+
+      if (tvClickTimer) clearTimeout(tvClickTimer);
+
+      if (tvClickCount >= 5) {
+        tvClickCount = 0;
+        toggleSecretCounterModal(true);
+      } else {
+        tvClickTimer = setTimeout(() => {
+          tvClickCount = 0;
+        }, 2200);
+      }
+    }
+
+    function toggleSecretCounterModal(show) {
+      const modal = document.getElementById('secretCounterOverlay');
+      if (show) {
+        modal.classList.add('active');
+        updateCounterDisplay();
+      } else {
+        modal.classList.remove('active');
+      }
+    }
+
+    async function initCounter() {
+      // 1. Local device counter
+      localVisits = parseInt(localStorage.getItem('txbiz_local_visits') || '0', 10) + 1;
+      localStorage.setItem('txbiz_local_visits', localVisits.toString());
+
+      // 2. CounterAPI.dev (Global Counter across devices)
+      try {
+        const res = await fetch('https://api.counterapi.dev/v1/katad-txbiz-news/pageviews/up');
+        const data = await res.json();
+        if (data && typeof data.count === 'number') {
+          totalVisits = Math.max(totalVisits, data.count);
+        }
+      } catch(e) {
+        console.warn('CounterAPI fallback:', e);
+      }
+
+      updateCounterDisplay();
+    }
+
+    function updateCounterDisplay() {
+      const globalEl = document.getElementById('secretGlobalCount');
+      const localEl = document.getElementById('secretLocalCount');
+
+      const displayCount = totalVisits || localVisits || 1;
+
+      if (globalEl) {
+        globalEl.innerText = displayCount.toLocaleString() + ' 回';
+      }
+      if (localEl) {
+        localEl.innerText = localVisits.toLocaleString() + ' 回';
+      }
+    }
+
+    function getWatchedIds() {
+      try {
+        return JSON.parse(localStorage.getItem(WATCHED_KEY)) || [];
+      } catch(e) {
+        return [];
+      }
+    }
+
+    function markAsWatched(vid) {
+      const watched = getWatchedIds();
+      if (!watched.includes(vid)) {
+        watched.push(vid);
+        localStorage.setItem(WATCHED_KEY, JSON.stringify(watched));
+      }
+      renderGrid();
+    }
+
+    function markUpToAsWatched(targetIndex) {
+      const watched = getWatchedIds();
+      for (let i = 0; i <= targetIndex && i < allVideos.length; i++) {
+        const vid = allVideos[i].id;
+        if (!watched.includes(vid)) {
+          watched.push(vid);
+        }
+      }
+      localStorage.setItem(WATCHED_KEY, JSON.stringify(watched));
+      renderGrid();
+    }
+
+    function toggleWatched(vid) {
+      let watched = getWatchedIds();
+      if (watched.includes(vid)) {
+        watched = watched.filter(id => id !== vid);
+      } else {
+        watched.push(vid);
+      }
+      localStorage.setItem(WATCHED_KEY, JSON.stringify(watched));
+      renderGrid();
+    }
+
+    function resetWatchHistory() {
+      if (confirm('この端末のニュース視聴履歴をリセットしますか？')) {
+        localStorage.removeItem(WATCHED_KEY);
+        renderGrid();
+      }
+    }
+
+    async function fetchNews() {
+      let loaded = false;
+
+      // 1. サーバーAPI (/api/news) の呼び出しを試行
+      try {
+        const res = await fetch('/api/news');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.playlist_id) {
+            playlistId = data.playlist_id;
+          }
+          if (data.visit_count) {
+            totalVisits = Math.max(totalVisits, data.visit_count);
+            updateCounterDisplay();
+          }
+          if (data.notice) {
+            const banner = document.getElementById('noticeBanner');
+            banner.innerText = 'ℹ️ ' + data.notice;
+            banner.style.display = 'block';
+          }
+          if (data.videos && data.videos.length > 0) {
+            allVideos = data.videos;
+            renderGrid();
+            loaded = true;
+          }
+        }
+      } catch(e) {
+        console.warn('API fetch failed, falling back to static cache:', e);
+      }
+
+      // 2. APIが利用できない場合（サーバー未起動 / 通信エラー等）はローカルキャッシュ(cached_news.json)をフォールバック読み込み
+      if (!loaded) {
+        try {
+          const res = await fetch('./cached_news.json');
+          if (res.ok) {
+            const data = await res.json();
+            if (data.playlist_id) {
+              playlistId = data.playlist_id;
+            }
+            if (data.videos && data.videos.length > 0) {
+              allVideos = data.videos;
+              renderGrid();
+              loaded = true;
+            }
+          }
+        } catch(e) {
+          console.error('Failed to load cached_news.json:', e);
+        }
+      }
+
+      if (!loaded) {
+        const grid = document.getElementById('videoGrid');
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--txbiz-red); font-weight: bold;">
+          ⚠️ ニュース再生リストの読み込みに失敗しました。<br>「1_GUI起動_Webダッシュボード.bat」から起動しているか確認してください。
+        </div>`;
+      }
+    }
+
+    function renderGrid() {
+      const watchedIds = getWatchedIds();
+      const hideWatched = document.getElementById('hideWatchedToggle').checked;
+      const grid = document.getElementById('videoGrid');
+
+      const filtered = hideWatched ? allVideos.filter(v => !watchedIds.includes(v.id)) : allVideos;
+
+      if (filtered.length === 0) {
+        if (allVideos.length > 0) {
+          grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+            <p style="margin-bottom: 12px; font-weight: bold;">🎉 すべてのニュース動画を視聴済みです！</p>
+            <button class="btn-small" onclick="resetWatchHistory()" style="background: var(--txbiz-red); color: white;">視聴履歴をリセットして再表示</button>
+          </div>`;
+        } else {
+          grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+            表示対象のニュース動画がありません。
+          </div>`;
+        }
+        return;
+      }
+
+      grid.innerHTML = filtered.map((v, idx) => {
+        const isWatched = watchedIds.includes(v.id);
+        const originalIndex = allVideos.findIndex(item => item.id === v.id);
+        return `
+          <div class="video-card ${isWatched ? 'watched' : ''}">
+            <div class="thumb-box" onclick="openSingleVideoInYouTube('${v.id}')">
+              <img class="thumb-img" src="${v.thumbnail_url || 'https://via.placeholder.com/320x180'}" alt="${v.title}">
+              <div class="play-overlay">
+                <div class="play-icon">▶</div>
+              </div>
+              <div class="dur-badge">⏱️ ${v.duration_str}</div>
+              ${isWatched ? '<div class="watched-badge">✓ 視聴済み</div>' : ''}
+            </div>
+            <div class="card-body">
+              <div class="video-title" title="${v.title}">${v.title}</div>
+              <div class="card-meta">
+                <span>${v.published_at}</span>
+                <span class="btn-toggle-read" onclick="event.stopPropagation(); toggleWatched('${v.id}')">
+                  ${isWatched ? '✓ 既読 (解除)' : '既読にする'}
+                </span>
+              </div>
+              <div class="card-actions">
+                <button class="btn-mark-up-to" onclick="event.stopPropagation(); markUpToAsWatched(${originalIndex})">
+                  ✓ ここまで一括既読にする
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function isMobileDevice() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    function openUnwatchedInYouTube() {
+      const watchedIds = getWatchedIds();
+      const unwatched = allVideos.filter(v => !watchedIds.includes(v.id));
+
+      if (unwatched.length === 0) {
+        alert('全てのニュース動画を視聴済みです！\n\nもう一度最初から視聴したい場合は「視聴履歴をリセット」を押してください。');
+        return;
+      }
+
+      const targetVideo = unwatched[0];
+      openSingleVideoInYouTube(targetVideo.id);
+    }
+
+    function openSingleVideoInYouTube(vid) {
+      markAsWatched(vid);
+      const targetUrl = `https://www.youtube.com/watch?v=${vid}&list=${playlistId}`;
+
+      if (isMobileDevice()) {
+        window.location.href = targetUrl;
+      } else {
+        window.open(targetUrl, '_blank');
+      }
+    }
+
+    // Initialize
+    initCounter();
+    fetchNews();
+  </script>
+</body>
+</html>

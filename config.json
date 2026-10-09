@@ -1,0 +1,9 @@
+{
+  "channel_handle": "tvtokyobiz",
+  "channel_query": "テレ東BIZダイジェスト",
+  "target_playlist_name": "テレ東BIZダイジェスト（2分以下）",
+  "max_duration_seconds": 120,
+  "exclude_keywords": [],
+  "max_fetch_count": 50,
+  "privacy_status": "private"
+}
