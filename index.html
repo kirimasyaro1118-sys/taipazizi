@@ -564,23 +564,23 @@
       </div>
 
       <div class="secret-stat-card">
-        <div class="secret-stat-label">👀 総来訪者数 (Total Pageviews)</div>
-        <div class="secret-stat-number" id="secretGlobalCount">ー</div>
+        <div class="secret-stat-label">👀 全アクセス数 (世界累計来訪者数)</div>
+        <div class="secret-stat-number" id="secretGlobalCount">集計中...</div>
       </div>
 
       <div class="secret-sub-stats">
         <div class="secret-sub-card">
-          <label>💻 端末内アクセス数</label>
+          <label>💻 この端末のアクセス数</label>
           <span id="secretLocalCount">ー</span>
         </div>
         <div class="secret-sub-card">
-          <label>🔒 ステータス</label>
-          <span style="color: var(--success); font-size: 0.9rem;">アクティブ</span>
+          <label>🔒 統計サーバー状態</label>
+          <span id="secretStatus" style="color: var(--success); font-size: 0.85rem; font-weight: 700;">同期中...</span>
         </div>
       </div>
 
       <p class="secret-footer-note">
-        ※ この統計画面は、ヘッダーのテレビアイコン (📺) を 5 回連打したときのみ表示されるシークレット機能です。
+        ※ この統計画面は、ヘッダーのテレビアイコン (📺) を 5 回連続タップするか、URLに <code>?secret</code> を付けて開いたときのみ表示される管理者シークレット機能です。
       </p>
     </div>
   </div>
@@ -593,18 +593,20 @@
     // Secret Counter Variables
     let tvClickCount = 0;
     let tvClickTimer = null;
-    let totalVisits = 0;
+    let totalVisits = null;
     let localVisits = 0;
+    let isCounterOnline = false;
 
     function handleTvIconClick() {
       tvClickCount++;
       const icon = document.getElementById('tvBrandIcon');
       
-      // Visual tap animation
-      icon.style.transform = 'scale(1.22)';
+      // Visual tap animation with playful tilt
+      const rot = tvClickCount % 2 === 0 ? '10deg' : '-10deg';
+      icon.style.transform = `scale(1.25) rotate(${rot})`;
       setTimeout(() => {
         icon.style.transform = '';
-      }, 150);
+      }, 160);
 
       if (tvClickTimer) clearTimeout(tvClickTimer);
 
@@ -614,7 +616,7 @@
       } else {
         tvClickTimer = setTimeout(() => {
           tvClickCount = 0;
-        }, 2200);
+        }, 3000);
       }
     }
 
@@ -629,35 +631,63 @@
     }
 
     async function initCounter() {
-      // 1. Local device counter
+      // 1. この端末のアクセス数をカウント
       localVisits = parseInt(localStorage.getItem('txbiz_local_visits') || '0', 10) + 1;
       localStorage.setItem('txbiz_local_visits', localVisits.toString());
+      updateCounterDisplay();
 
-      // 2. CounterAPI.dev (Global Counter across devices)
+      // 2. メインAPI: Abacus Counter API (全アクセス数を世界規模で集約)
       try {
-        const res = await fetch('https://api.counterapi.dev/v1/katad-txbiz-news/pageviews/up');
-        const data = await res.json();
-        if (data && typeof data.count === 'number') {
-          totalVisits = Math.max(totalVisits, data.count);
+        const res = await fetch('https://abacus.jasoncameron.dev/hit/katad-txbiz-news/pageviews');
+        if (res.ok) {
+          const data = await res.json();
+          const count = data.value || data.count;
+          if (typeof count === 'number' && count > 0) {
+            totalVisits = count;
+            isCounterOnline = true;
+            updateCounterDisplay();
+            return;
+          }
         }
       } catch(e) {
-        console.warn('CounterAPI fallback:', e);
+        console.warn('Abacus Counter API failed:', e);
       }
 
+      // 3. 通信エラー時のオフライン状態
+      isCounterOnline = false;
       updateCounterDisplay();
     }
 
     function updateCounterDisplay() {
       const globalEl = document.getElementById('secretGlobalCount');
       const localEl = document.getElementById('secretLocalCount');
-
-      const displayCount = totalVisits || localVisits || 1;
+      const statusEl = document.getElementById('secretStatus');
 
       if (globalEl) {
-        globalEl.innerText = displayCount.toLocaleString() + ' 回';
+        if (typeof totalVisits === 'number' && totalVisits > 0) {
+          globalEl.innerText = totalVisits.toLocaleString() + ' 回';
+        } else if (isCounterOnline) {
+          globalEl.innerText = '集計中...';
+        } else {
+          globalEl.innerText = (localVisits ? localVisits.toLocaleString() + ' 回 (端末内)' : 'ー');
+        }
       }
+
       if (localEl) {
-        localEl.innerText = localVisits.toLocaleString() + ' 回';
+        localEl.innerText = (localVisits || 1).toLocaleString() + ' 回';
+      }
+
+      if (statusEl) {
+        if (isCounterOnline) {
+          statusEl.innerText = '🟢 正常集計中';
+          statusEl.style.color = '#10b981';
+        } else if (totalVisits === null) {
+          statusEl.innerText = '🔄 同期中...';
+          statusEl.style.color = '#f59e0b';
+        } else {
+          statusEl.innerText = '⚠️ オフライン';
+          statusEl.style.color = '#ef4444';
+        }
       }
     }
 
@@ -720,7 +750,7 @@
             playlistId = data.playlist_id;
           }
           if (data.visit_count) {
-            totalVisits = Math.max(totalVisits, data.visit_count);
+            totalVisits = Math.max(totalVisits || 0, data.visit_count);
             updateCounterDisplay();
           }
           if (data.notice) {
@@ -850,6 +880,24 @@
     // Initialize
     initCounter();
     fetchNews();
+
+    // URLパラメータによるシークレット統計の自動展開 (?secret, ?stats, ?admin)
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('secret') || urlParams.has('stats') || urlParams.has('admin')) {
+        setTimeout(() => toggleSecretCounterModal(true), 300);
+      }
+    } catch(e) {}
+
+    // PC用キーボードショートカット (Ctrl + Shift + S)
+    window.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.shiftKey && (e.key === 'S' || e.key === 's')) {
+        e.preventDefault();
+        const modal = document.getElementById('secretCounterOverlay');
+        const isActive = modal && modal.classList.contains('active');
+        toggleSecretCounterModal(!isActive);
+      }
+    });
   </script>
 </body>
 </html>
