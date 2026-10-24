@@ -2,7 +2,7 @@
   "status": "success",
   "playlist_id": "PLFWKlyTx2vW4",
   "playlist_url": "https://www.youtube.com/playlist?list=PLFWKlyTx2vW4",
-  "total_count": 150,
+  "total_count": 377,
   "videos": [
     {
       "id": "-RJ8yVTEw9s",
@@ -102,15 +102,6 @@
       "published_at": "2026-10-01",
       "thumbnail_url": "https://i.ytimg.com/vi/LeRlYNddQtU/mqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=LeRlYNddQtU"
-    },
-    {
-      "id": "tC6JXfpXSP0",
-      "title": "Private video",
-      "duration_sec": 0,
-      "duration_str": "0分00秒",
-      "published_at": "",
-      "thumbnail_url": "",
-      "url": "https://www.youtube.com/watch?v=tC6JXfpXSP0"
     },
     {
       "id": "oFsw9jzI7Gk",
@@ -336,15 +327,6 @@
       "published_at": "2026-10-02",
       "thumbnail_url": "https://i.ytimg.com/vi/y35GGl72wHE/mqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=y35GGl72wHE"
-    },
-    {
-      "id": "D78Bjx9SnRQ",
-      "title": "N党立花氏襲撃認める  ナタで切り付け全治3週間のけが",
-      "duration_sec": 51,
-      "duration_str": "0分51秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/D78Bjx9SnRQ/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=D78Bjx9SnRQ"
     },
     {
       "id": "2F4y_-XrR0c",
@@ -1337,12 +1319,1515 @@
       "url": "https://www.youtube.com/watch?v=Kxqcbu25UDA"
     },
     {
+      "id": "PSf4aA0uleE",
+      "title": "アメリカ オープンAI 売上高 市場想定を下回る可能性 #オープンAI #AI #人工知能 #アンソロピック #売上高",
+      "duration_sec": 47,
+      "duration_str": "0分47秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/PSf4aA0uleE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=PSf4aA0uleE"
+    },
+    {
+      "id": "xDN33BBnYf4",
+      "title": "トランプ氏　中間選挙前は「イラン攻撃せず」　選挙戦ダメージ回避のため沈静化図ったか",
+      "duration_sec": 57,
+      "duration_str": "0分57秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/xDN33BBnYf4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=xDN33BBnYf4"
+    },
+    {
+      "id": "FIbRwgWMRb4",
+      "title": "政府 無駄な歳出の削減本格化　補助金・基金・租税特別措置など見直しへ　飲食料品の消費税率減税を閣議決定",
+      "duration_sec": 88,
+      "duration_str": "1分28秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/FIbRwgWMRb4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=FIbRwgWMRb4"
+    },
+    {
+      "id": "LiPId-glomA",
+      "title": "米国務長官 ウクライナ情勢は「危険な膠着状態」露軍がウクライナの民間バス攻撃で33人死亡　ゼレンスキー氏が報復宣言",
+      "duration_sec": 59,
+      "duration_str": "0分59秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/LiPId-glomA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=LiPId-glomA"
+    },
+    {
+      "id": "2N8WmymcRws",
+      "title": "8月の家計調査　消費支出は9カ月連続のマイナス　節約志向続く",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/2N8WmymcRws/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=2N8WmymcRws"
+    },
+    {
+      "id": "23wg-Romoc4",
+      "title": "AIにはAI活用でセキュリティー対策 自民党がサイバー攻撃対策協議",
+      "duration_sec": 43,
+      "duration_str": "0分43秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/23wg-Romoc4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=23wg-Romoc4"
+    },
+    {
+      "id": "4Mlb6hfMONE",
+      "title": "【警告】リンクを踏むだけで乗っ取り AI時代の情報流出の手口 #AI #サイバー攻撃 #フィッシング #乗っ取り #リンク",
+      "duration_sec": 47,
+      "duration_str": "0分47秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/4Mlb6hfMONE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=4Mlb6hfMONE"
+    },
+    {
+      "id": "FO9XP4Gv3CY",
+      "title": "簗農水大臣発言問題　高市総理「まずは本人にしっかり説明してほしい」　更迭重ねて否定",
+      "duration_sec": 69,
+      "duration_str": "1分09秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/FO9XP4Gv3CY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=FO9XP4Gv3CY"
+    },
+    {
+      "id": "IbmamvM9jSA",
+      "title": "ブックオフに不正アクセス 643万件漏えいの可能性 企業への攻撃相次ぐ",
+      "duration_sec": 74,
+      "duration_str": "1分14秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/IbmamvM9jSA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=IbmamvM9jSA"
+    },
+    {
+      "id": "0QNYgqku05M",
+      "title": "エルニーニョ現象 過去最大の強さに 日本の冬は気温が高くなる見込み",
+      "duration_sec": 39,
+      "duration_str": "0分39秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/0QNYgqku05M/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=0QNYgqku05M"
+    },
+    {
+      "id": "lyHh0WGpi34",
+      "title": "米国防総省、元少佐の銃殺刑を生配信へ　2009年基地での銃乱射事件で死刑判決",
+      "duration_sec": 49,
+      "duration_str": "0分49秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/lyHh0WGpi34/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=lyHh0WGpi34"
+    },
+    {
+      "id": "w1vp7wX9lms",
+      "title": "プルデンシャル生命 業務停止3カ月超 親会社には改善命令",
+      "duration_sec": 34,
+      "duration_str": "0分34秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/w1vp7wX9lms/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=w1vp7wX9lms"
+    },
+    {
+      "id": "jSnOTF84zQI",
+      "title": "UCC　東京都内で巨大ガチャマシンが14種のコーヒーとスイーツを提供　消費拡大に繋げる狙い",
+      "duration_sec": 64,
+      "duration_str": "1分04秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/jSnOTF84zQI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=jSnOTF84zQI"
+    },
+    {
+      "id": "Dri1PKo1SOM",
+      "title": "フィジカルAIに任せたい 介護の裏方業務「洗濯・掃除」 #AI #エナクティック #アンパラレルド  #若林正恭 #オードリー #テレ東 #テレ東BIZ",
+      "duration_sec": 76,
+      "duration_str": "1分16秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/Dri1PKo1SOM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Dri1PKo1SOM"
+    },
+    {
+      "id": "OttGeOOt2sI",
+      "title": "ガイアの夜明け【“コメ急落” 日本米の逆襲　～農家と企業が挑む、稼げる農業～】予告",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/OttGeOOt2sI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=OttGeOOt2sI"
+    },
+    {
+      "id": "u1Ng_2FzZWs",
+      "title": "業務停止3カ月超 プルデンシャル【WBS】",
+      "duration_sec": 55,
+      "duration_str": "0分55秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/u1Ng_2FzZWs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=u1Ng_2FzZWs"
+    },
+    {
+      "id": "u6lCHLtLcQU",
+      "title": "16兆円調達目指す ソフトバンクG【WBS】",
+      "duration_sec": 25,
+      "duration_str": "0分25秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/u6lCHLtLcQU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=u6lCHLtLcQU"
+    },
+    {
+      "id": "FzE8L3NAKqw",
+      "title": "“ショッパー”復刻 ビームス50周年【WBS】",
+      "duration_sec": 55,
+      "duration_str": "0分55秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/FzE8L3NAKqw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=FzE8L3NAKqw"
+    },
+    {
+      "id": "vuFEV-iMORw",
+      "title": "トランプ政権が圧力強化 ICC本体を制裁対象に指定【WBS】",
+      "duration_sec": 29,
+      "duration_str": "0分29秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/vuFEV-iMORw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=vuFEV-iMORw"
+    },
+    {
+      "id": "QYhQrq-SsSs",
+      "title": "トランプ政権の制裁に抗議 ICC「任務を完全に遂行」【WBS】",
+      "duration_sec": 25,
+      "duration_str": "0分25秒",
+      "published_at": "2026-10-09",
+      "thumbnail_url": "https://i.ytimg.com/vi/QYhQrq-SsSs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=QYhQrq-SsSs"
+    },
+    {
+      "id": "I2aXdVYzE9o",
+      "title": "NVIDIAが認めた 日本発AIロボットアーム #AI #エナクティック #アンパラレルド  #若林正恭 #オードリー #テレ東 #テレ東BIZ",
+      "duration_sec": 65,
+      "duration_str": "1分05秒",
+      "published_at": "2026-10-10",
+      "thumbnail_url": "https://i.ytimg.com/vi/I2aXdVYzE9o/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=I2aXdVYzE9o"
+    },
+    {
+      "id": "sniKJ7g33nM",
+      "title": "米トランプ政権、ICCを制裁対象に指定　ICC赤根所長は制裁を強く非難",
+      "duration_sec": 60,
+      "duration_str": "1分00秒",
+      "published_at": "2026-10-10",
+      "thumbnail_url": "https://i.ytimg.com/vi/sniKJ7g33nM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=sniKJ7g33nM"
+    },
+    {
+      "id": "hMcNI1KBPYE",
+      "title": "台湾の頼清徳総統、中国が台湾海峡の現状を変更しようとしていると批判",
+      "duration_sec": 47,
+      "duration_str": "0分47秒",
+      "published_at": "2026-10-10",
+      "thumbnail_url": "https://i.ytimg.com/vi/hMcNI1KBPYE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=hMcNI1KBPYE"
+    },
+    {
+      "id": "D4aK82ZR5jI",
+      "title": "アンソロピックのAI「クロード」が米機関に架空情報を送信",
+      "duration_sec": 37,
+      "duration_str": "0分37秒",
+      "published_at": "2026-10-10",
+      "thumbnail_url": "https://i.ytimg.com/vi/D4aK82ZR5jI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=D4aK82ZR5jI"
+    },
+    {
+      "id": "6keHiHISDEU",
+      "title": "米露首脳が電話会談　ロシアが軽油供給で合意",
+      "duration_sec": 62,
+      "duration_str": "1分02秒",
+      "published_at": "2026-10-10",
+      "thumbnail_url": "https://i.ytimg.com/vi/6keHiHISDEU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=6keHiHISDEU"
+    },
+    {
+      "id": "Mopxmhwzn6Q",
+      "title": "両陛下　国民スポーツ大会開会式に出席",
+      "duration_sec": 44,
+      "duration_str": "0分44秒",
+      "published_at": "2026-10-10",
+      "thumbnail_url": "https://i.ytimg.com/vi/Mopxmhwzn6Q/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Mopxmhwzn6Q"
+    },
+    {
+      "id": "dDTJuBJriAk",
+      "title": "200種類の国産チーズが集合　国内最大級のイベント開催",
+      "duration_sec": 30,
+      "duration_str": "0分30秒",
+      "published_at": "2026-10-10",
+      "thumbnail_url": "https://i.ytimg.com/vi/dDTJuBJriAk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=dDTJuBJriAk"
+    },
+    {
+      "id": "B59ed4KM6ig",
+      "title": "米国株 12月6日から「23時間取引」始まる #マネーのまなび #パックン #武藤十夢 #投資 #株 #米国株 #BSテレ東 #テレ東BIZ",
+      "duration_sec": 94,
+      "duration_str": "1分34秒",
+      "published_at": "2026-10-10",
+      "thumbnail_url": "https://i.ytimg.com/vi/B59ed4KM6ig/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=B59ed4KM6ig"
+    },
+    {
+      "id": "6srdooAy-qQ",
+      "title": "サウジ空港攻撃で12人死亡 300人以上が負傷",
+      "duration_sec": 63,
+      "duration_str": "1分03秒",
+      "published_at": "2026-10-11",
+      "thumbnail_url": "https://i.ytimg.com/vi/6srdooAy-qQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=6srdooAy-qQ"
+    },
+    {
+      "id": "5070DULka_U",
+      "title": "トランプ大統領「ウクライナは新しい大統領を迎える時が来た」",
+      "duration_sec": 63,
+      "duration_str": "1分03秒",
+      "published_at": "2026-10-11",
+      "thumbnail_url": "https://i.ytimg.com/vi/5070DULka_U/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=5070DULka_U"
+    },
+    {
+      "id": "HcHx7Y5FvwU",
+      "title": "ニューヨーク・コミコン2026 「NARUTO」新プロジェクト発表",
+      "duration_sec": 68,
+      "duration_str": "1分08秒",
+      "published_at": "2026-10-11",
+      "thumbnail_url": "https://i.ytimg.com/vi/HcHx7Y5FvwU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HcHx7Y5FvwU"
+    },
+    {
+      "id": "d07d-SoNzbA",
+      "title": "両陛下　青森訪問で卓球観戦とねぶた鑑賞",
+      "duration_sec": 50,
+      "duration_str": "0分50秒",
+      "published_at": "2026-10-11",
+      "thumbnail_url": "https://i.ytimg.com/vi/d07d-SoNzbA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=d07d-SoNzbA"
+    },
+    {
+      "id": "EwrLghPy3VQ",
+      "title": "米司法省　テレビ5局を独禁法違反の疑いで調査",
+      "duration_sec": 32,
+      "duration_str": "0分32秒",
+      "published_at": "2026-10-11",
+      "thumbnail_url": "https://i.ytimg.com/vi/EwrLghPy3VQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=EwrLghPy3VQ"
+    },
+    {
+      "id": "UzrssxdngXE",
+      "title": "億り人「たぱぞう」が考案 米国株 23時間取引の影響 #マネーのまなび #パックン #武藤十夢 #投資 #株 #米国株 #たぱぞう #BSテレ東 #テレ東BIZ",
+      "duration_sec": 85,
+      "duration_str": "1分25秒",
+      "published_at": "2026-10-11",
+      "thumbnail_url": "https://i.ytimg.com/vi/UzrssxdngXE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=UzrssxdngXE"
+    },
+    {
+      "id": "QqqTtLIhfP8",
+      "title": "サウジ空港に新たな攻撃1人死亡11人負傷 フーシ派の攻撃強まる",
+      "duration_sec": 67,
+      "duration_str": "1分07秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/QqqTtLIhfP8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=QqqTtLIhfP8"
+    },
+    {
+      "id": "mTTxqFI3WvY",
+      "title": "トランプ大統領が「エネルギー停戦」合意主張　ゼレンスキー大統領「初耳だ」",
+      "duration_sec": 52,
+      "duration_str": "0分52秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/mTTxqFI3WvY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=mTTxqFI3WvY"
+    },
+    {
+      "id": "Fmt3GrPd9xc",
+      "title": "北朝鮮が2発の弾道ミサイルを相次ぎ発射",
+      "duration_sec": 44,
+      "duration_str": "0分44秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/Fmt3GrPd9xc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Fmt3GrPd9xc"
+    },
+    {
+      "id": "dc__iME5gjw",
+      "title": "中国ロボット新興CEO「ロボットのAIモデル開発は原始的な段階」",
+      "duration_sec": 73,
+      "duration_str": "1分13秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/dc__iME5gjw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=dc__iME5gjw"
+    },
+    {
+      "id": "AB95eth5c_g",
+      "title": "30代・40代女性の体力低下 運動習慣が減少傾向",
+      "duration_sec": 54,
+      "duration_str": "0分54秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/AB95eth5c_g/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AB95eth5c_g"
+    },
+    {
+      "id": "JTpnrLq8yBc",
+      "title": "子どもから大人までスポーツを楽しく体験「スポーツの日」",
+      "duration_sec": 48,
+      "duration_str": "0分48秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/JTpnrLq8yBc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=JTpnrLq8yBc"
+    },
+    {
+      "id": "P57wvGEioRo",
+      "title": "バーナム英首相「EU離脱にロシアの介入あった」",
+      "duration_sec": 52,
+      "duration_str": "0分52秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/P57wvGEioRo/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=P57wvGEioRo"
+    },
+    {
+      "id": "4mqeh0kcQjs",
+      "title": "ジブチ沖で定員超過の移民船が転覆 139人死亡",
+      "duration_sec": 44,
+      "duration_str": "0分44秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/4mqeh0kcQjs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=4mqeh0kcQjs"
+    },
+    {
+      "id": "M5KfaGHdNPs",
+      "title": "北朝鮮から弾道ミサイル　一発は変則軌道で飛行か",
+      "duration_sec": 36,
+      "duration_str": "0分36秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/M5KfaGHdNPs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=M5KfaGHdNPs"
+    },
+    {
+      "id": "lgsdDg3XTZA",
+      "title": "交流サイト情報漏えい ヤマハ発動機【WBS】",
+      "duration_sec": 32,
+      "duration_str": "0分32秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/lgsdDg3XTZA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=lgsdDg3XTZA"
+    },
+    {
+      "id": "E_99idcyw1w",
+      "title": "バーナム首相 「EU離脱にロシア介入」【WBS】",
+      "duration_sec": 27,
+      "duration_str": "0分27秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/E_99idcyw1w/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=E_99idcyw1w"
+    },
+    {
+      "id": "HjK2Tm2yDis",
+      "title": "エチオピアから退避か 移民船転覆 死者139人に【WBS】",
+      "duration_sec": 26,
+      "duration_str": "0分26秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/HjK2Tm2yDis/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HjK2Tm2yDis"
+    },
+    {
+      "id": "aVeV_gy9bAI",
+      "title": "政権への抗議は継続 ゴキブリ党 創設者を釈放【WBS】",
+      "duration_sec": 22,
+      "duration_str": "0分22秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/aVeV_gy9bAI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=aVeV_gy9bAI"
+    },
+    {
+      "id": "2aYVNj_wRpg",
+      "title": "政党間の争いが激化 非常事態宣言 州首相を拘束か【WBS】",
+      "duration_sec": 27,
+      "duration_str": "0分27秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/2aYVNj_wRpg/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=2aYVNj_wRpg"
+    },
+    {
+      "id": "JxKRm91Gysg",
+      "title": "ウクライナ ゼレンスキー大統領 「ロシアが“エネルギー停戦”違反」【モーサテ】",
+      "duration_sec": 50,
+      "duration_str": "0分50秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/JxKRm91Gysg/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=JxKRm91Gysg"
+    },
+    {
+      "id": "DtA3Ei0jYgY",
+      "title": "サウジ攻撃 空の便に影響 米航空当局が警戒呼びかけ【モーサテ】",
+      "duration_sec": 46,
+      "duration_str": "0分46秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/DtA3Ei0jYgY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=DtA3Ei0jYgY"
+    },
+    {
+      "id": "69t67RXy9dc",
+      "title": "米アマゾン 新興AIを1兆円超で買収か【モーサテ】",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/69t67RXy9dc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=69t67RXy9dc"
+    },
+    {
+      "id": "fKIp36V_Yig",
+      "title": "米スターバックス チポトレ買収を否定【モーサテ】",
+      "duration_sec": 35,
+      "duration_str": "0分35秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/fKIp36V_Yig/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=fKIp36V_Yig"
+    },
+    {
+      "id": "xVfrsfjyHrw",
+      "title": "EU 北朝鮮とロシアに追加制裁 弾道ミサイル開発など支援で【モーサテ】",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-12",
+      "thumbnail_url": "https://i.ytimg.com/vi/xVfrsfjyHrw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=xVfrsfjyHrw"
+    },
+    {
+      "id": "Wou_ux_POWE",
+      "title": "簗農水大臣「予算カット」発言を衆院予算委で謝罪　シャトルバス用意は認める",
+      "duration_sec": 72,
+      "duration_str": "1分12秒",
+      "published_at": "2026-10-13",
+      "thumbnail_url": "https://i.ytimg.com/vi/Wou_ux_POWE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Wou_ux_POWE"
+    },
+    {
+      "id": "TaPfrwDiGxs",
+      "title": "ノーベル平和賞のピレイ氏がICC国際刑事裁判所を訪問　米対立の赤根所長らが歓迎",
+      "duration_sec": 47,
+      "duration_str": "0分47秒",
+      "published_at": "2026-10-13",
+      "thumbnail_url": "https://i.ytimg.com/vi/TaPfrwDiGxs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=TaPfrwDiGxs"
+    },
+    {
+      "id": "dMRWj8NuoHI",
+      "title": "米マスク氏　共和党に約440億円以上を献金「米史上最大級の政治献金」",
+      "duration_sec": 39,
+      "duration_str": "0分39秒",
+      "published_at": "2026-10-13",
+      "thumbnail_url": "https://i.ytimg.com/vi/dMRWj8NuoHI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=dMRWj8NuoHI"
+    },
+    {
+      "id": "I61rH6NJevM",
+      "title": "米当局　元ソマリア難民の民主党議員宅を捜索　中間選挙前で民主党反発　トランプ氏ソマリアを「不潔な国」",
+      "duration_sec": 60,
+      "duration_str": "1分00秒",
+      "published_at": "2026-10-13",
+      "thumbnail_url": "https://i.ytimg.com/vi/I61rH6NJevM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=I61rH6NJevM"
+    },
+    {
+      "id": "ZCrBqsSEi08",
+      "title": "IMF世界成長率　3.1％に上方修正 AI関連の大規模投資が支える　世界二極化も",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-13",
+      "thumbnail_url": "https://i.ytimg.com/vi/ZCrBqsSEi08/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ZCrBqsSEi08"
+    },
+    {
+      "id": "fP3aB3HqVuA",
+      "title": "フランスのスーパーでサイバー攻撃　冷凍食品の温度上昇で大量廃棄",
+      "duration_sec": 37,
+      "duration_str": "0分37秒",
+      "published_at": "2026-10-13",
+      "thumbnail_url": "https://i.ytimg.com/vi/fP3aB3HqVuA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=fP3aB3HqVuA"
+    },
+    {
+      "id": "egiFcc9QMbI",
+      "title": "アメリカ アップル 新端末でスマートホーム強化  #アップル #スマートホーム #ホームビュー #HomeView #SiriAI",
+      "duration_sec": 32,
+      "duration_str": "0分32秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/egiFcc9QMbI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=egiFcc9QMbI"
+    },
+    {
+      "id": "JPO5zXBL_ks",
+      "title": "簗大臣　バス送迎答弁を修正  総理「違法なら躊躇せず」",
+      "duration_sec": 86,
+      "duration_str": "1分26秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/JPO5zXBL_ks/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=JPO5zXBL_ks"
+    },
+    {
+      "id": "B5rILI4U3oY",
+      "title": "フーシ派がサウジアラムコ本社を攻撃　首都リヤドでもミサイル攻撃",
+      "duration_sec": 49,
+      "duration_str": "0分49秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/B5rILI4U3oY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=B5rILI4U3oY"
+    },
+    {
+      "id": "_c3z_IEJlTg",
+      "title": "米財務省がバンク・オブ・アメリカに約1900億円の罰金　中国などマネロン対策を放置",
+      "duration_sec": 39,
+      "duration_str": "0分39秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/_c3z_IEJlTg/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=_c3z_IEJlTg"
+    },
+    {
+      "id": "igN0rARDyc0",
+      "title": "フランス　高校生の大規模デモ続く　約16万人が参加　一部が暴徒化",
+      "duration_sec": 30,
+      "duration_str": "0分30秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/igN0rARDyc0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=igN0rARDyc0"
+    },
+    {
+      "id": "m8oTrER3K54",
+      "title": "簗農水大臣 続投に意欲 野党 問責決議案の参院提出で一致",
+      "duration_sec": 83,
+      "duration_str": "1分23秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/m8oTrER3K54/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=m8oTrER3K54"
+    },
+    {
+      "id": "AwaPFf2TcU0",
+      "title": "アンソロピック　AIが家電で自己増殖の可能性",
+      "duration_sec": 52,
+      "duration_str": "0分52秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/AwaPFf2TcU0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AwaPFf2TcU0"
+    },
+    {
+      "id": "fjOsj68Xm7I",
+      "title": "中国ひと月当たり輸出過去最高 9月貿易統計",
+      "duration_sec": 46,
+      "duration_str": "0分46秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/fjOsj68Xm7I/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=fjOsj68Xm7I"
+    },
+    {
+      "id": "ZT1Bf_4Ce8A",
+      "title": "アイロボットジャパン ペットの抜け毛などに対応 新型ルンバ",
+      "duration_sec": 56,
+      "duration_str": "0分56秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/ZT1Bf_4Ce8A/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ZT1Bf_4Ce8A"
+    },
+    {
+      "id": "49QTuRgExrc",
+      "title": "東京原油 18年ぶり最高値更新 中東緊迫化で",
+      "duration_sec": 41,
+      "duration_str": "0分41秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/49QTuRgExrc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=49QTuRgExrc"
+    },
+    {
+      "id": "3yY_dWeaBHo",
+      "title": "自社専用の業務システムを最短1カ月で構築　ラクスがAI活用し2027年にサービス開始へ　海外展開も",
+      "duration_sec": 38,
+      "duration_str": "0分38秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/3yY_dWeaBHo/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=3yY_dWeaBHo"
+    },
+    {
+      "id": "3FL_MlfwY3I",
+      "title": "メディアアーティストの落合陽一さんが手がけた「ヌルヌルネクサス」　14日横浜市にオープン",
+      "duration_sec": 42,
+      "duration_str": "0分42秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/3FL_MlfwY3I/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=3FL_MlfwY3I"
+    },
+    {
+      "id": "XD0EvQg_HT4",
+      "title": "ASML 純利益2.3倍 7－9月期 AI需要で【WBS】",
+      "duration_sec": 41,
+      "duration_str": "0分41秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/XD0EvQg_HT4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=XD0EvQg_HT4"
+    },
+    {
+      "id": "WCVnhhYYprY",
+      "title": "ニデックに「独自の取締役」 “物言う株主”オアシス【WBS】",
+      "duration_sec": 46,
+      "duration_str": "0分46秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/WCVnhhYYprY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=WCVnhhYYprY"
+    },
+    {
+      "id": "PFP4BwP9J80",
+      "title": "ワールドとTSI 経営統合へ 国内アパレル3位に【WBS】",
+      "duration_sec": 34,
+      "duration_str": "0分34秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/PFP4BwP9J80/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=PFP4BwP9J80"
+    },
+    {
+      "id": "WJr_IHXcfZM",
+      "title": "中国 9月輸出 過去最高「サプライチェーン充実」【WBS】",
+      "duration_sec": 34,
+      "duration_str": "0分34秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/WJr_IHXcfZM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=WJr_IHXcfZM"
+    },
+    {
+      "id": "EmjdoGdFbpo",
+      "title": "業務システム 短期間で ラクス AI新サービス【WBS】",
+      "duration_sec": 52,
+      "duration_str": "0分52秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/EmjdoGdFbpo/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=EmjdoGdFbpo"
+    },
+    {
+      "id": "1iIhHUH9-To",
+      "title": "米消費者物価 伸び加速 幅広い品目で上昇【モーサテ】",
+      "duration_sec": 56,
+      "duration_str": "0分56秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/1iIhHUH9-To/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=1iIhHUH9-To"
+    },
+    {
+      "id": "gSxeBd_tMJE",
+      "title": "米ベージュブック 物価上昇で経済活動伸び悩み【モーサテ】",
+      "duration_sec": 43,
+      "duration_str": "0分43秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/gSxeBd_tMJE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=gSxeBd_tMJE"
+    },
+    {
+      "id": "nFtVoNvA3aU",
+      "title": "米金融大手 減益で株価急落 罰金が利益圧迫【モーサテ】",
+      "duration_sec": 34,
+      "duration_str": "0分34秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/nFtVoNvA3aU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=nFtVoNvA3aU"
+    },
+    {
+      "id": "HGxrdWBsn5Q",
+      "title": "米受託生産大手 NY州に新半導体工場【モーサテ】",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/HGxrdWBsn5Q/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HGxrdWBsn5Q"
+    },
+    {
+      "id": "HK6qo78OcAA",
+      "title": "ネットフリックス 6％人員削減 2022年以来最大規模【モーサテ】",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-14",
+      "thumbnail_url": "https://i.ytimg.com/vi/HK6qo78OcAA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HK6qo78OcAA"
+    },
+    {
+      "id": "Huxj624E6zY",
+      "title": "アメリカ金融大手 減益で株価急落 #バンクオブアメリカ  #決算  #銀行  #マネーロンダリング  #罰金",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/Huxj624E6zY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Huxj624E6zY"
+    },
+    {
+      "id": "OFsj5l7UzYA",
+      "title": "農林水産大臣の後任に自民党の武部新元農水副大臣を起用へ",
+      "duration_sec": 28,
+      "duration_str": "0分28秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/OFsj5l7UzYA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=OFsj5l7UzYA"
+    },
+    {
+      "id": "K9CQEMEOzc4",
+      "title": "米「スターリンク」に制限 ウクライナ軍の作戦に影響",
+      "duration_sec": 94,
+      "duration_str": "1分34秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/K9CQEMEOzc4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=K9CQEMEOzc4"
+    },
+    {
+      "id": "1eYuY0YTYj8",
+      "title": "フーシ派　サウジ空港攻撃継続を表明",
+      "duration_sec": 60,
+      "duration_str": "1分00秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/1eYuY0YTYj8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=1eYuY0YTYj8"
+    },
+    {
+      "id": "USaupSyPLgk",
+      "title": "GEA国際会議開幕 開会式に両陛下出席",
+      "duration_sec": 46,
+      "duration_str": "0分46秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/USaupSyPLgk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=USaupSyPLgk"
+    },
+    {
+      "id": "249LeKEx0xQ",
+      "title": "ドイツ 13歳未満SNS禁止へ メルツ政権が閣議決定",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/249LeKEx0xQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=249LeKEx0xQ"
+    },
+    {
+      "id": "-bVKAJHPuII",
+      "title": "米8州がオープンAI提訴 「子どもに害」安全対策要求",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/-bVKAJHPuII/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=-bVKAJHPuII"
+    },
+    {
+      "id": "yb8DSUjRPn8",
+      "title": "警察庁　ストーカー加害者にGPS端末を装着させるなどの新対策導入に向け有識者検討会を設置へ",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/yb8DSUjRPn8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=yb8DSUjRPn8"
+    },
+    {
+      "id": "SX9Wsu0vq20",
+      "title": "カンブリア宮殿【デジタル時代に絶好調　創業140年 老舗の挑戦】予告",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/SX9Wsu0vq20/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=SX9Wsu0vq20"
+    },
+    {
+      "id": "oLjTEApJfxk",
+      "title": "みずほ AI人材の育成強化 3カ月で営業社員を転換【WBS】",
+      "duration_sec": 41,
+      "duration_str": "0分41秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/oLjTEApJfxk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=oLjTEApJfxk"
+    },
+    {
+      "id": "cOwa8u3TzNI",
+      "title": "NY州の半導体工場に投資へ 対米投資第3弾【WBS】",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/cOwa8u3TzNI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=cOwa8u3TzNI"
+    },
+    {
+      "id": "995AtrUeyvM",
+      "title": "自動調理で“上下両面焼き” タイガー魔法瓶 新家電【WBS】",
+      "duration_sec": 43,
+      "duration_str": "0分43秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/995AtrUeyvM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=995AtrUeyvM"
+    },
+    {
+      "id": "mkj2GM1IzA4",
+      "title": "丸の内にフィジカルAIロボ 人との共存を実証実験【WBS】",
+      "duration_sec": 36,
+      "duration_str": "0分36秒",
+      "published_at": "2026-10-15",
+      "thumbnail_url": "https://i.ytimg.com/vi/mkj2GM1IzA4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=mkj2GM1IzA4"
+    },
+    {
+      "id": "lfcKwzPvR0U",
+      "title": "米生産者物価 ↑6.3% 2022年以来の伸び【モーサテ】",
+      "duration_sec": 42,
+      "duration_str": "0分42秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/lfcKwzPvR0U/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=lfcKwzPvR0U"
+    },
+    {
+      "id": "1tFTs-vvYBA",
+      "title": "エヌビディアCEO 「コアウィーブの財務状況は改善」【モーサテ】",
+      "duration_sec": 44,
+      "duration_str": "0分44秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/1tFTs-vvYBA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=1tFTs-vvYBA"
+    },
+    {
+      "id": "AtuWvAh77QM",
+      "title": "米小売売上高 予想上回る ガソリン高騰が押し上げ【モーサテ】",
+      "duration_sec": 29,
+      "duration_str": "0分29秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/AtuWvAh77QM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AtuWvAh77QM"
+    },
+    {
+      "id": "r1Qs2fJRleE",
+      "title": "アンソロピック売上高↑5割 成長ペースは鈍化【モーサテ】",
+      "duration_sec": 29,
+      "duration_str": "0分29秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/r1Qs2fJRleE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=r1Qs2fJRleE"
+    },
+    {
+      "id": "38LAtPEIspA",
+      "title": "日韓 通貨交換協定を延長 融通枠100億ドルを維持【モーサテ】",
+      "duration_sec": 48,
+      "duration_str": "0分48秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/38LAtPEIspA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=38LAtPEIspA"
+    },
+    {
+      "id": "CNSDdAgcbXU",
+      "title": "日韓 通貨交換協定を延長 #片山財務大臣 #韓国 #バンコク #タイ #通貨交換協定 #片山さつき",
+      "duration_sec": 45,
+      "duration_str": "0分45秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/CNSDdAgcbXU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=CNSDdAgcbXU"
+    },
+    {
+      "id": "Ny9TbQn0F2U",
+      "title": "TSMC7－9月期決算 増収増益 好調続く",
+      "duration_sec": 36,
+      "duration_str": "0分36秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/Ny9TbQn0F2U/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Ny9TbQn0F2U"
+    },
+    {
+      "id": "GuGXE5fn2Tg",
+      "title": "TSMC 7～9月最高益に AI向け先端半導体が好調【WBS】",
+      "duration_sec": 46,
+      "duration_str": "0分46秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/GuGXE5fn2Tg/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=GuGXE5fn2Tg"
+    },
+    {
+      "id": "uF2-Ng_ntkU",
+      "title": "野党　任命責任を追及　高市総理「かばったわけではない」　消費減税でも与野党対立",
+      "duration_sec": 79,
+      "duration_str": "1分19秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/uF2-Ng_ntkU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=uF2-Ng_ntkU"
+    },
+    {
+      "id": "8cltluBUHJQ",
+      "title": "フーシ派　イエメン暫定政権の大統領府をミサイル攻撃　サウジへの攻撃も継続表明",
+      "duration_sec": 48,
+      "duration_str": "0分48秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/8cltluBUHJQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=8cltluBUHJQ"
+    },
+    {
+      "id": "mKjuMotQtPw",
+      "title": "G7 ウクライナのチェルノービリ原発の復旧に約460億円拠出",
+      "duration_sec": 49,
+      "duration_str": "0分49秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/mKjuMotQtPw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=mKjuMotQtPw"
+    },
+    {
+      "id": "I2_iiKpltaM",
+      "title": "赤沢経産大臣　灯油の安定供給と価格高騰対策を発表",
+      "duration_sec": 42,
+      "duration_str": "0分42秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/I2_iiKpltaM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=I2_iiKpltaM"
+    },
+    {
+      "id": "Gu6y0Toh888",
+      "title": "米オレゴン州の小学校　銃撃事件で4人死亡 容疑者は16歳の少年か",
+      "duration_sec": 26,
+      "duration_str": "0分26秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/Gu6y0Toh888/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Gu6y0Toh888"
+    },
+    {
+      "id": "aitMUAgg9Zs",
+      "title": "在留外国人428万　過去最多を更新　新規入国者は中国の渡航自粛で減少",
+      "duration_sec": 36,
+      "duration_str": "0分36秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/aitMUAgg9Zs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=aitMUAgg9Zs"
+    },
+    {
+      "id": "DqAzc87mrFU",
+      "title": "「餃子の王将」社長射殺事件で暴力団幹部に無罪判決　現場の吸い殻は「持ち込まれた可能性」　被告の犯行に「合理的な疑い」",
+      "duration_sec": 67,
+      "duration_str": "1分07秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/DqAzc87mrFU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=DqAzc87mrFU"
+    },
+    {
+      "id": "olKr6Zinw88",
+      "title": "北海道新聞記者拘束 ロシアから領事通報　木原官房長官「一刻も早く面会」",
+      "duration_sec": 75,
+      "duration_str": "1分15秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/olKr6Zinw88/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=olKr6Zinw88"
+    },
+    {
+      "id": "nbGzrKKkSio",
+      "title": "日本経済新聞社 不正アクセス受け約183万件の個人情報漏えい",
+      "duration_sec": 41,
+      "duration_str": "0分41秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/nbGzrKKkSio/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=nbGzrKKkSio"
+    },
+    {
+      "id": "2Lcuf18weJo",
+      "title": "高市総理　飲食料品の消費減税は物価高対策として「最も早い方法」",
+      "duration_sec": 56,
+      "duration_str": "0分56秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/2Lcuf18weJo/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=2Lcuf18weJo"
+    },
+    {
+      "id": "qG78eoUAjYI",
+      "title": "気象庁　緊急地震速報を発表するも直後に取り消し「地震規模を過大推定したため」",
+      "duration_sec": 36,
+      "duration_str": "0分36秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/qG78eoUAjYI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=qG78eoUAjYI"
+    },
+    {
+      "id": "CvCWxF2OyNI",
+      "title": "食の担い手初の人間国宝認定へ　「京料理」料理人の髙橋英一さんと「吟醸造り」杜氏の農口尚彦さんら3人",
+      "duration_sec": 28,
+      "duration_str": "0分28秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/CvCWxF2OyNI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=CvCWxF2OyNI"
+    },
+    {
+      "id": "G_RbjflV-ic",
+      "title": "高級路線にペット同伴…4つのブランドで急成長 #カンブリア宮殿 #大江戸温泉物語 #湯快リゾート #統合 #宿",
+      "duration_sec": 37,
+      "duration_str": "0分37秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/G_RbjflV-ic/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=G_RbjflV-ic"
+    },
+    {
+      "id": "gJZQv3SSCl4",
+      "title": "ガイアの夜明け【世界遺産、その先に…　～人と技術で未来へつなぐ～】予告",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/gJZQv3SSCl4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=gJZQv3SSCl4"
+    },
+    {
+      "id": "hxFP5Vsm290",
+      "title": "緊急地震速報を取り消し　異なる震源データで計算【WBS】",
+      "duration_sec": 38,
+      "duration_str": "0分38秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/hxFP5Vsm290/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=hxFP5Vsm290"
+    },
+    {
+      "id": "jQWN3byESyU",
+      "title": "永守氏らに損害賠償請求へ　ニデック 法令違反を認定【WBS】",
+      "duration_sec": 35,
+      "duration_str": "0分35秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/jQWN3byESyU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=jQWN3byESyU"
+    },
+    {
+      "id": "Cxp0WwVM59Q",
+      "title": "日経新聞 個人情報漏えい　不正アクセスで183万件【WBS】",
+      "duration_sec": 57,
+      "duration_str": "0分57秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/Cxp0WwVM59Q/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Cxp0WwVM59Q"
+    },
+    {
+      "id": "Xegp_qKI8uk",
+      "title": "うるう秒の廃止決定　通信障害などの混乱回避へ【WBS】",
+      "duration_sec": 28,
+      "duration_str": "0分28秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/Xegp_qKI8uk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Xegp_qKI8uk"
+    },
+    {
+      "id": "scn6UsMQFOQ",
+      "title": "免許画像 直ちに削除　タイムズ ルール変更【WBS】",
+      "duration_sec": 25,
+      "duration_str": "0分25秒",
+      "published_at": "2026-10-16",
+      "thumbnail_url": "https://i.ytimg.com/vi/scn6UsMQFOQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=scn6UsMQFOQ"
+    },
+    {
+      "id": "zXR2fhsJkpY",
+      "title": "本音続々！衝撃アンケート/こんな会議はいらない/無人化の最前線【放送版/円卓コンフィデンシャル】",
+      "duration_sec": 114,
+      "duration_str": "1分54秒",
+      "published_at": "2026-10-17",
+      "thumbnail_url": "https://i.ytimg.com/vi/zXR2fhsJkpY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=zXR2fhsJkpY"
+    },
+    {
+      "id": "e-WnfnKNfyE",
+      "title": "EU 米のICC制裁に「撤回求める」",
+      "duration_sec": 59,
+      "duration_str": "0分59秒",
+      "published_at": "2026-10-17",
+      "thumbnail_url": "https://i.ytimg.com/vi/e-WnfnKNfyE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=e-WnfnKNfyE"
+    },
+    {
+      "id": "54ZVKO4ogq8",
+      "title": "日本大使館関係者「男性記者と面会できず」",
+      "duration_sec": 60,
+      "duration_str": "1分00秒",
+      "published_at": "2026-10-17",
+      "thumbnail_url": "https://i.ytimg.com/vi/54ZVKO4ogq8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=54ZVKO4ogq8"
+    },
+    {
+      "id": "HjUCad4eS1I",
+      "title": "高市総理　靖国神社の秋の例大祭に「真榊」を奉納",
+      "duration_sec": 50,
+      "duration_str": "0分50秒",
+      "published_at": "2026-10-17",
+      "thumbnail_url": "https://i.ytimg.com/vi/HjUCad4eS1I/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HjUCad4eS1I"
+    },
+    {
+      "id": "nszHRIrTGas",
+      "title": "防衛省　自衛隊殉職隊員追悼式で追悼の誠をささげる",
+      "duration_sec": 45,
+      "duration_str": "0分45秒",
+      "published_at": "2026-10-17",
+      "thumbnail_url": "https://i.ytimg.com/vi/nszHRIrTGas/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=nszHRIrTGas"
+    },
+    {
+      "id": "piZtsNo5bzg",
+      "title": "トランプ大統領、対露制裁法の実施見送る",
+      "duration_sec": 38,
+      "duration_str": "0分38秒",
+      "published_at": "2026-10-17",
+      "thumbnail_url": "https://i.ytimg.com/vi/piZtsNo5bzg/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=piZtsNo5bzg"
+    },
+    {
+      "id": "3Tq5h2EjLEw",
+      "title": "羽田空港で「パスポート発給160周年記念イベント」　貴重なパスポートや当時の制服をお披露目",
+      "duration_sec": 30,
+      "duration_str": "0分30秒",
+      "published_at": "2026-10-17",
+      "thumbnail_url": "https://i.ytimg.com/vi/3Tq5h2EjLEw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=3Tq5h2EjLEw"
+    },
+    {
+      "id": "Z9SlTPf9MCQ",
+      "title": "大江戸温泉物語 わんわんリゾート #カンブリア宮殿 #大江戸温泉物語 #わんわんリゾート #犬 #温泉 #ペット同伴",
+      "duration_sec": 58,
+      "duration_str": "0分58秒",
+      "published_at": "2026-10-17",
+      "thumbnail_url": "https://i.ytimg.com/vi/Z9SlTPf9MCQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Z9SlTPf9MCQ"
+    },
+    {
+      "id": "9YU9gmTVEEY",
+      "title": "IMF 欧州に債務削減要求 「何もしない選択肢なし」【モーサテ】",
+      "duration_sec": 38,
+      "duration_str": "0分38秒",
+      "published_at": "2026-10-18",
+      "thumbnail_url": "https://i.ytimg.com/vi/9YU9gmTVEEY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=9YU9gmTVEEY"
+    },
+    {
+      "id": "ObcxhDHOPkM",
+      "title": "フランス「55万人デモ」で暴徒化 マクロン大統領 暴力行為を非難【モーサテ】",
+      "duration_sec": 58,
+      "duration_str": "0分58秒",
+      "published_at": "2026-10-18",
+      "thumbnail_url": "https://i.ytimg.com/vi/ObcxhDHOPkM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ObcxhDHOPkM"
+    },
+    {
+      "id": "k_To0SgQ6UI",
+      "title": "パワハラ辞職の前市長 敗れる 新･横浜市長に原沢敦美氏【モーサテ】",
+      "duration_sec": 75,
+      "duration_str": "1分15秒",
+      "published_at": "2026-10-18",
+      "thumbnail_url": "https://i.ytimg.com/vi/k_To0SgQ6UI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=k_To0SgQ6UI"
+    },
+    {
+      "id": "8p0VTzK1khg",
+      "title": "マクロン大統領 暴力行為を非難#フランス #マクロン大統領 #高校生 #デモ #暴力行為 #暴徒化",
+      "duration_sec": 57,
+      "duration_str": "0分57秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/8p0VTzK1khg/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=8p0VTzK1khg"
+    },
+    {
+      "id": "82u5IjmcmDA",
+      "title": "知られざる証券会社の舞台裏ダイジェスト【Sponsored by 岩井コスモ証券】",
+      "duration_sec": 91,
+      "duration_str": "1分31秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/82u5IjmcmDA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=82u5IjmcmDA"
+    },
+    {
+      "id": "JLxc77SueNk",
+      "title": "総理「国債発行額 適切にコントロール」消費税減税の財源で国債発行否定せず",
+      "duration_sec": 60,
+      "duration_str": "1分00秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/JLxc77SueNk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=JLxc77SueNk"
+    },
+    {
+      "id": "KW8OSuszJl8",
+      "title": "高市総理　玉串料を私費で奉納　参拝は見送る方向",
+      "duration_sec": 34,
+      "duration_str": "0分34秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/KW8OSuszJl8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=KW8OSuszJl8"
+    },
+    {
+      "id": "-Rh7px1w2xQ",
+      "title": "農水省　コメ需要の聞き取りで初会合　コメ用途別で見通しに活かす",
+      "duration_sec": 29,
+      "duration_str": "0分29秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/-Rh7px1w2xQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=-Rh7px1w2xQ"
+    },
+    {
+      "id": "ZVYEVeB7_no",
+      "title": "中国7－9月の実質GDP　4.5％増　目標の下限に",
+      "duration_sec": 32,
+      "duration_str": "0分32秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/ZVYEVeB7_no/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ZVYEVeB7_no"
+    },
+    {
+      "id": "tyUrTAqTKtI",
+      "title": "総理「簗氏に説明責任果たしてもらいたい」野党は参考人招致も視野",
+      "duration_sec": 61,
+      "duration_str": "1分01秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/tyUrTAqTKtI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=tyUrTAqTKtI"
+    },
+    {
+      "id": "v9BmU0jgxN0",
+      "title": "中国GDP「国内内需が弱い」",
+      "duration_sec": 56,
+      "duration_str": "0分56秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/v9BmU0jgxN0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=v9BmU0jgxN0"
+    },
+    {
+      "id": "7e5FR3OqAmA",
+      "title": "三菱電機　鴻海精密工業との提携を発表　子会社の三菱電機モビリティの売り上げ1兆円を目指す",
+      "duration_sec": 59,
+      "duration_str": "0分59秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/7e5FR3OqAmA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=7e5FR3OqAmA"
+    },
+    {
+      "id": "o976YbSwQy8",
+      "title": "プーチン大統領ウクライナめぐり「米中露首脳会談」提案",
+      "duration_sec": 53,
+      "duration_str": "0分53秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/o976YbSwQy8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=o976YbSwQy8"
+    },
+    {
+      "id": "nnS43SfoxKE",
+      "title": "東京都が緊急銃猟訓練 ツキノワグマの市街地出没を想定",
+      "duration_sec": 67,
+      "duration_str": "1分07秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/nnS43SfoxKE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=nnS43SfoxKE"
+    },
+    {
+      "id": "_MoZfxv-wio",
+      "title": "JETRO　外部から不正アクセスを受け　ホームページの公開を一時停止",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/_MoZfxv-wio/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=_MoZfxv-wio"
+    },
+    {
+      "id": "b7FcGD0ZFIc",
+      "title": "企業の16％で情報漏えい発生 データ処理専門家不在の企業も",
+      "duration_sec": 25,
+      "duration_str": "0分25秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/b7FcGD0ZFIc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=b7FcGD0ZFIc"
+    },
+    {
+      "id": "n5r25kitux0",
+      "title": "山口周さんに学ぶ リーダーシップ論 #47歳からのキャリア #上司 #部下 #山口周 #リーダーシップ",
+      "duration_sec": 41,
+      "duration_str": "0分41秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/n5r25kitux0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=n5r25kitux0"
+    },
+    {
+      "id": "EIlKHYXhhb4",
+      "title": "米中露首脳会談を提案 ウクライナは反発【WBS】",
+      "duration_sec": 44,
+      "duration_str": "0分44秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/EIlKHYXhhb4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=EIlKHYXhhb4"
+    },
+    {
+      "id": "ewvsR1vfhaM",
+      "title": "修繕談合で有識者ら初会合 国交省 対策とりまとめへ【WBS】",
+      "duration_sec": 39,
+      "duration_str": "0分39秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/ewvsR1vfhaM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ewvsR1vfhaM"
+    },
+    {
+      "id": "YRRfdfPLx-Q",
+      "title": "「2050年ビジョン」策定へ 経団連 少子化対策など【WBS】",
+      "duration_sec": 34,
+      "duration_str": "0分34秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/YRRfdfPLx-Q/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=YRRfdfPLx-Q"
+    },
+    {
+      "id": "02nPRfSNew0",
+      "title": "トランプ大統領 ネタニヤフ氏を「全面支持」【WBS】",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/02nPRfSNew0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=02nPRfSNew0"
+    },
+    {
+      "id": "TNbIwwpySu8",
+      "title": "爆破予告で ウィーン行き緊急着陸【WBS】",
+      "duration_sec": 25,
+      "duration_str": "0分25秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/TNbIwwpySu8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=TNbIwwpySu8"
+    },
+    {
+      "id": "F54mQ-KY7XM",
+      "title": "フランスで長期金利上昇 デモ暴徒化で政治不安も【モーサテ】",
+      "duration_sec": 64,
+      "duration_str": "1分04秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/F54mQ-KY7XM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=F54mQ-KY7XM"
+    },
+    {
+      "id": "WU1muuEePNo",
+      "title": "インドネシア株価急落 当局がMSCIと協議か【モーサテ】",
+      "duration_sec": 40,
+      "duration_str": "0分40秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/WU1muuEePNo/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=WU1muuEePNo"
+    },
+    {
+      "id": "WVqFdvj3_dw",
+      "title": "食料品消費税減税の財源 高市総理 「国債発行 否定せず」【モーサテ】",
+      "duration_sec": 60,
+      "duration_str": "1分00秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/WVqFdvj3_dw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=WVqFdvj3_dw"
+    },
+    {
+      "id": "arykoViDEj8",
+      "title": "火星衛星の探査へ H3ロケット打ち上げ 分離成功【モーサテ】",
+      "duration_sec": 44,
+      "duration_str": "0分44秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/arykoViDEj8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=arykoViDEj8"
+    },
+    {
+      "id": "HROH8ZXzqFY",
+      "title": "中東情勢の影響が拡大 「砂漠のダボス会議」来年に延期【モーサテ】",
+      "duration_sec": 48,
+      "duration_str": "0分48秒",
+      "published_at": "2026-10-19",
+      "thumbnail_url": "https://i.ytimg.com/vi/HROH8ZXzqFY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HROH8ZXzqFY"
+    },
+    {
+      "id": "isGUMvE9Z6M",
+      "title": "トランプ大統領 米中露首脳会談へ意欲",
+      "duration_sec": 57,
+      "duration_str": "0分57秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/isGUMvE9Z6M/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=isGUMvE9Z6M"
+    },
+    {
+      "id": "-f2pXRTP83w",
+      "title": "H3ロケット10号機打ち上げ成功 火星探査機MMXを軌道に投入",
+      "duration_sec": 57,
+      "duration_str": "0分57秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/-f2pXRTP83w/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=-f2pXRTP83w"
+    },
+    {
+      "id": "ZHids3ZNUeI",
+      "title": "上皇后さま92歳の誕生日",
+      "duration_sec": 48,
+      "duration_str": "0分48秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/ZHids3ZNUeI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ZHids3ZNUeI"
+    },
+    {
+      "id": "FyxY5yef0-Q",
+      "title": "イエメン暫定政権の訓練施設をフーシ派がミサイル攻撃 50人以上死亡",
+      "duration_sec": 50,
+      "duration_str": "0分50秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/FyxY5yef0-Q/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=FyxY5yef0-Q"
+    },
+    {
+      "id": "TMzzAIJKSzM",
+      "title": "フランス各地の暴動を受け夜間外出禁止令",
+      "duration_sec": 41,
+      "duration_str": "0分41秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/TMzzAIJKSzM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=TMzzAIJKSzM"
+    },
+    {
+      "id": "0VE77xjzzkY",
+      "title": "イーロンマスク スペースX株を全米の子どもに",
+      "duration_sec": 32,
+      "duration_str": "0分32秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/0VE77xjzzkY/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=0VE77xjzzkY"
+    },
+    {
+      "id": "BSvTDBvaxeM",
+      "title": "火星衛星へ探査機打ち上げ #JAXA  #宇宙航空研究開発機構  #火星衛星探査計画  #MMX  #Ｈ3ロケット  #種子島宇宙センター  #ロケット  #宇宙",
+      "duration_sec": 44,
+      "duration_str": "0分44秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/BSvTDBvaxeM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=BSvTDBvaxeM"
+    },
+    {
+      "id": "CFQ1_WZm9jU",
+      "title": "トランプ大統領 支持率31％ 過去最低を更新",
+      "duration_sec": 48,
+      "duration_str": "0分48秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/CFQ1_WZm9jU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=CFQ1_WZm9jU"
+    },
+    {
+      "id": "QkuQx4yZtHg",
+      "title": "Private video",
+      "duration_sec": 0,
+      "duration_str": "0分00秒",
+      "published_at": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/QkuQx4yZtHg/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=QkuQx4yZtHg"
+    },
+    {
+      "id": "tC6JXfpXSP0",
+      "title": "Private video",
+      "duration_sec": 0,
+      "duration_str": "0分00秒",
+      "published_at": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/tC6JXfpXSP0/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=tC6JXfpXSP0"
+    },
+    {
+      "id": "D78Bjx9SnRQ",
+      "title": "Private video",
+      "duration_sec": 0,
+      "duration_str": "0分00秒",
+      "published_at": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/D78Bjx9SnRQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=D78Bjx9SnRQ"
+    },
+    {
       "id": "bCdm-TqImmQ",
       "title": "Private video",
       "duration_sec": 0,
       "duration_str": "0分00秒",
       "published_at": "",
-      "thumbnail_url": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/bCdm-TqImmQ/mqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=bCdm-TqImmQ"
     },
     {
@@ -1351,10 +2836,569 @@
       "duration_sec": 0,
       "duration_str": "0分00秒",
       "published_at": "",
-      "thumbnail_url": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/fyOGAqN82Hg/mqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=fyOGAqN82Hg"
+    },
+    {
+      "id": "uN18Jtc7OFQ",
+      "title": "外務省欧州局長がロシア側と会談 拘束記者の即時解放を申し入れ",
+      "duration_sec": 35,
+      "duration_str": "0分35秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/uN18Jtc7OFQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=uN18Jtc7OFQ"
+    },
+    {
+      "id": "chaiedNHvDk",
+      "title": "ツルハホールディングス 新プライベートブランドを発表",
+      "duration_sec": 52,
+      "duration_str": "0分52秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/chaiedNHvDk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=chaiedNHvDk"
+    },
+    {
+      "id": "_H_CkwiHEus",
+      "title": "「日本茶GI」推進委員会　情報発信を強化し世界に向けてPR",
+      "duration_sec": 68,
+      "duration_str": "1分08秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/_H_CkwiHEus/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=_H_CkwiHEus"
+    },
+    {
+      "id": "Vmz5qqMC71g",
+      "title": "武部大臣「速やかに確認」公選法違反疑い報道受け 2024衆院選で公共事業受注企業から30万円受領",
+      "duration_sec": 60,
+      "duration_str": "1分00秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/Vmz5qqMC71g/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Vmz5qqMC71g"
+    },
+    {
+      "id": "xWbWEBsKkLE",
+      "title": "Private video",
+      "duration_sec": 0,
+      "duration_str": "0分00秒",
+      "published_at": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/xWbWEBsKkLE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=xWbWEBsKkLE"
+    },
+    {
+      "id": "HeFIx2FJ57Y",
+      "title": "岩井コスモ証券にサイバー攻撃　金融庁が原因分析要請",
+      "duration_sec": 59,
+      "duration_str": "0分59秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/HeFIx2FJ57Y/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HeFIx2FJ57Y"
+    },
+    {
+      "id": "g6HASmIazMc",
+      "title": "「テスラ」と「スペースX」が統合検討　マスク氏は前向きも「ハードル高い」",
+      "duration_sec": 26,
+      "duration_str": "0分26秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/g6HASmIazMc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=g6HASmIazMc"
+    },
+    {
+      "id": "2yu7hXesJvE",
+      "title": "2026年上半期の貿易統計速報　2兆8184億円の赤字　赤字幅が2倍近く拡大",
+      "duration_sec": 22,
+      "duration_str": "0分22秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/2yu7hXesJvE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=2yu7hXesJvE"
+    },
+    {
+      "id": "fpwsIZ4hbtc",
+      "title": "AI社会実装に向け施策会議　赤沢大臣　データ活用で社会課題解決を",
+      "duration_sec": 34,
+      "duration_str": "0分34秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/fpwsIZ4hbtc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=fpwsIZ4hbtc"
+    },
+    {
+      "id": "CWyY9opuq2c",
+      "title": "ウクライナ大統領と米特使が会談　ウクライナ米露3カ国首脳会談を提案",
+      "duration_sec": 55,
+      "duration_str": "0分55秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/CWyY9opuq2c/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=CWyY9opuq2c"
+    },
+    {
+      "id": "NIEaVUhENpk",
+      "title": "マスク氏　ウクライナ軍の「スターリンク」利用で制限指示か トランプ氏らと協議か",
+      "duration_sec": 48,
+      "duration_str": "0分48秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/NIEaVUhENpk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=NIEaVUhENpk"
+    },
+    {
+      "id": "_S0xbh8HMWc",
+      "title": "イタリア デモでの暴力罪新設　破壊受け未成年拘束拡大も",
+      "duration_sec": 67,
+      "duration_str": "1分07秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/_S0xbh8HMWc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=_S0xbh8HMWc"
+    },
+    {
+      "id": "5vIRRL66vlc",
+      "title": "アンソロピック赤字12.8兆円か #AI #アンソロピック #AIインフラ #IPO #新規株式公開",
+      "duration_sec": 29,
+      "duration_str": "0分29秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/5vIRRL66vlc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=5vIRRL66vlc"
+    },
+    {
+      "id": "P7OB0mEpJV8",
+      "title": "アンソロピック赤字12.8兆円か AI投資かさむ【モーサテ】",
+      "duration_sec": 29,
+      "duration_str": "0分29秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/P7OB0mEpJV8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=P7OB0mEpJV8"
+    },
+    {
+      "id": "abTJF3evk7E",
+      "title": "米GM 利益見通し引き下げ 自社株買い発表も株価下落【モーサテ】",
+      "duration_sec": 35,
+      "duration_str": "0分35秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/abTJF3evk7E/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=abTJF3evk7E"
+    },
+    {
+      "id": "Kh10OdoZB2I",
+      "title": "米住宅市場の需要減速 金利高止まりで【モーサテ】",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/Kh10OdoZB2I/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Kh10OdoZB2I"
+    },
+    {
+      "id": "YtZKie0XulI",
+      "title": "米ネットフリックス決算 売上高見通し 予想下回る【モーサテ】",
+      "duration_sec": 55,
+      "duration_str": "0分55秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/YtZKie0XulI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=YtZKie0XulI"
+    },
+    {
+      "id": "Z_2EaUsMy80",
+      "title": "米スペースX決算 初の黒字転換 AI部門けん引【モーサテ】",
+      "duration_sec": 75,
+      "duration_str": "1分15秒",
+      "published_at": "2026-10-21",
+      "thumbnail_url": "https://i.ytimg.com/vi/Z_2EaUsMy80/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Z_2EaUsMy80"
+    },
+    {
+      "id": "lpMshvnmw4U",
+      "title": "衆院解散「想定していない」 2年後の消費税引き上げ巡り【WBS】",
+      "duration_sec": 42,
+      "duration_str": "0分42秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/lpMshvnmw4U/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=lpMshvnmw4U"
+    },
+    {
+      "id": "HkQmu2dM0T8",
+      "title": "マンション発売戸数↓4割 9月首都圏 平均価格も下落【WBS】",
+      "duration_sec": 36,
+      "duration_str": "0分36秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/HkQmu2dM0T8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HkQmu2dM0T8"
+    },
+    {
+      "id": "4EevaSKPCh8",
+      "title": "医療AIシステムに先端半導体 ラピダスや富士フイルムなど【WBS】",
+      "duration_sec": 41,
+      "duration_str": "0分41秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/4EevaSKPCh8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=4EevaSKPCh8"
+    },
+    {
+      "id": "r6PULN3CLWs",
+      "title": "ニデック損害は276億円 調査委員会が報告書【WBS】",
+      "duration_sec": 28,
+      "duration_str": "0分28秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/r6PULN3CLWs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=r6PULN3CLWs"
+    },
+    {
+      "id": "AnD3Jwg0YW4",
+      "title": "英 金融サービス混乱 グーグルクラウドで障害【WBS】",
+      "duration_sec": 50,
+      "duration_str": "0分50秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/AnD3Jwg0YW4/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AnD3Jwg0YW4"
+    },
+    {
+      "id": "cPlAgiPFUVI",
+      "title": "優れたリーダー 行為よりも文脈で決まる #47歳からのキャリア #上司 #部下 #山口周 #リーダーシップ",
+      "duration_sec": 40,
+      "duration_str": "0分40秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/cPlAgiPFUVI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=cPlAgiPFUVI"
+    },
+    {
+      "id": "n-CuVuQ0eHw",
+      "title": "ロシア軍がウクライナの公園攻撃 母子含む6人死亡 子どもが多数けが",
+      "duration_sec": 26,
+      "duration_str": "0分26秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/n-CuVuQ0eHw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=n-CuVuQ0eHw"
+    },
+    {
+      "id": "gQSAEY4cmdU",
+      "title": "4～9月の首都圏新築マンション1億1494万円 上半期初の1億円超　建築費高騰で21％上昇",
+      "duration_sec": 29,
+      "duration_str": "0分29秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/gQSAEY4cmdU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=gQSAEY4cmdU"
+    },
+    {
+      "id": "bcDmHdyJZ3s",
+      "title": "東京の小規模農家を守れ！都心の赤坂に“生産者ファースト”15種類超の野菜が主役のラーメン店オープンへ　その狙いと思いは？",
+      "duration_sec": 84,
+      "duration_str": "1分24秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/bcDmHdyJZ3s/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=bcDmHdyJZ3s"
+    },
+    {
+      "id": "T7iJMiw1LIQ",
+      "title": "「防衛省ファンディング」最多応募 大阪大学など47件採択",
+      "duration_sec": 51,
+      "duration_str": "0分51秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/T7iJMiw1LIQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=T7iJMiw1LIQ"
+    },
+    {
+      "id": "o-HUKIFlGgI",
+      "title": "日本企業へのサイバー攻撃に中国系AI使用か 民間調査で確認",
+      "duration_sec": 55,
+      "duration_str": "0分55秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/o-HUKIFlGgI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=o-HUKIFlGgI"
+    },
+    {
+      "id": "gRodrPZp6JQ",
+      "title": "JR東日本の新たなコード決済「teppay」スタート　「Suica」と連携",
+      "duration_sec": 68,
+      "duration_str": "1分08秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/gRodrPZp6JQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=gRodrPZp6JQ"
+    },
+    {
+      "id": "IpPruEjDXpc",
+      "title": "消費税減税関連法案が衆院で審議入り 高市総理「最後まで責任を持って対応」",
+      "duration_sec": 57,
+      "duration_str": "0分57秒",
+      "published_at": "2026-10-20",
+      "thumbnail_url": "https://i.ytimg.com/vi/IpPruEjDXpc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=IpPruEjDXpc"
+    },
+    {
+      "id": "AylB1nHTkxk",
+      "title": "小型無人ボートで海の見える化 目指すは地震予測 #アンパラレルド #ウミエル #若林正恭 #オードリー #テレ東 #テレ東BIZ",
+      "duration_sec": 51,
+      "duration_str": "0分51秒",
+      "published_at": "2026-10-24",
+      "thumbnail_url": "https://i.ytimg.com/vi/AylB1nHTkxk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AylB1nHTkxk"
+    },
+    {
+      "id": "5Oab5oROjOk",
+      "title": "愛犬とレッドカーペット 新たな体験型イベント開催",
+      "duration_sec": 30,
+      "duration_str": "0分30秒",
+      "published_at": "2026-10-24",
+      "thumbnail_url": "https://i.ytimg.com/vi/5Oab5oROjOk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=5Oab5oROjOk"
+    },
+    {
+      "id": "ZrFzBSrwHxk",
+      "title": "米司法省 アラスカ上院選で共和党現職惜敗なら認証阻止へ提訴 「同姓同名」候補者で混乱",
+      "duration_sec": 35,
+      "duration_str": "0分35秒",
+      "published_at": "2026-10-24",
+      "thumbnail_url": "https://i.ytimg.com/vi/ZrFzBSrwHxk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ZrFzBSrwHxk"
+    },
+    {
+      "id": "futZ6hMRbtw",
+      "title": "トランプ政権が対カナダ50％関税一部除外へ 米中間選挙で候補者後押し",
+      "duration_sec": 40,
+      "duration_str": "0分40秒",
+      "published_at": "2026-10-24",
+      "thumbnail_url": "https://i.ytimg.com/vi/futZ6hMRbtw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=futZ6hMRbtw"
+    },
+    {
+      "id": "WRdIqP3WjHs",
+      "title": "ロシアとウクライナが局地的に戦闘停止で合意 27日からウクライナ南部で人道支援物資を搬入　米大統領妻が主導",
+      "duration_sec": 48,
+      "duration_str": "0分48秒",
+      "published_at": "2026-10-24",
+      "thumbnail_url": "https://i.ytimg.com/vi/WRdIqP3WjHs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=WRdIqP3WjHs"
+    },
+    {
+      "id": "smEA4uHcWmk",
+      "title": "パリで日本時間24日夜から再び大規模デモ フランス全土で参加呼びかけ　暴動対策に治安要員7万人厳戒態勢",
+      "duration_sec": 76,
+      "duration_str": "1分16秒",
+      "published_at": "2026-10-24",
+      "thumbnail_url": "https://i.ytimg.com/vi/smEA4uHcWmk/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=smEA4uHcWmk"
+    },
+    {
+      "id": "VRPt_dm03RM",
+      "title": "GMO  不正アクセス確認  国に「能動的サイバー防御」緊急要請　損失を補償 全利用者に見舞金5000円",
+      "duration_sec": 57,
+      "duration_str": "0分57秒",
+      "published_at": "2026-10-24",
+      "thumbnail_url": "https://i.ytimg.com/vi/VRPt_dm03RM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=VRPt_dm03RM"
+    },
+    {
+      "id": "e351RdUNe0s",
+      "title": "ウクライナ南部で局地停戦へ 米ホワイトハウスが発表【WBS】",
+      "duration_sec": 37,
+      "duration_str": "0分37秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/e351RdUNe0s/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=e351RdUNe0s"
+    },
+    {
+      "id": "BWB--uqIqbQ",
+      "title": "会員制ビアバー開業へ サッポロビール【WBS】",
+      "duration_sec": 53,
+      "duration_str": "0分53秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/BWB--uqIqbQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=BWB--uqIqbQ"
+    },
+    {
+      "id": "3hgEpRpOBzI",
+      "title": "150年の歴史に幕 名物の馬車 禁止法案可決【WBS】",
+      "duration_sec": 27,
+      "duration_str": "0分27秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/3hgEpRpOBzI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=3hgEpRpOBzI"
+    },
+    {
+      "id": "uE8_bCgs8hU",
+      "title": "2027年3月まで「着手は不可」　リニア静岡工区【WBS】",
+      "duration_sec": 22,
+      "duration_str": "0分22秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/uE8_bCgs8hU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=uE8_bCgs8hU"
+    },
+    {
+      "id": "IoLR4s-3o9I",
+      "title": "基地周辺土地取得に許可制　原則 外国政府には認めず【WBS】",
+      "duration_sec": 44,
+      "duration_str": "0分44秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/IoLR4s-3o9I/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=IoLR4s-3o9I"
+    },
+    {
+      "id": "yxaimHbqnGo",
+      "title": "ガイアの夜明け【ニッポン発！世界で稼ぐ～“新農業”100兆円産業を創出へ～】予告",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/yxaimHbqnGo/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=yxaimHbqnGo"
+    },
+    {
+      "id": "xqUDVvkfcic",
+      "title": "なぜ速い？NANDの読み出し#理系通信 #キオクシア #メモリ #NAND",
+      "duration_sec": 45,
+      "duration_str": "0分45秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/xqUDVvkfcic/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=xqUDVvkfcic"
+    },
+    {
+      "id": "4ydg5MkOhu8",
+      "title": "気象庁気象研究所　8～9月の記録的大雨は地球温暖化が影響との研究結果を公表",
+      "duration_sec": 32,
+      "duration_str": "0分32秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/4ydg5MkOhu8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=4ydg5MkOhu8"
+    },
+    {
+      "id": "C3yb7rbPX2A",
+      "title": "大卒3年以内の離職率は3割　2年連続で低下　賃上げ進展が背景か",
+      "duration_sec": 30,
+      "duration_str": "0分30秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/C3yb7rbPX2A/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=C3yb7rbPX2A"
+    },
+    {
+      "id": "9ETKrjzvsrQ",
+      "title": "自民党　「サイバー対処本部」設置求める提言提出　高市総理「サイバーセキュリティの強化に取り組む」",
+      "duration_sec": 51,
+      "duration_str": "0分51秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/9ETKrjzvsrQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=9ETKrjzvsrQ"
+    },
+    {
+      "id": "ZIPuSaf8Y2o",
+      "title": "作家の村上龍さん死去　74歳",
+      "duration_sec": 35,
+      "duration_str": "0分35秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/ZIPuSaf8Y2o/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ZIPuSaf8Y2o"
+    },
+    {
+      "id": "Y_-jH6vYQ0Y",
+      "title": "ノーベル賞硤合氏に文化勲章 「マリオ」の宮本氏も",
+      "duration_sec": 80,
+      "duration_str": "1分20秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/Y_-jH6vYQ0Y/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Y_-jH6vYQ0Y"
+    },
+    {
+      "id": "5yA-03-ccZA",
+      "title": "巨人新監督に松井秀喜氏「新たな黄金時代を」 背番号はかつての恩師と同じ「90」",
+      "duration_sec": 66,
+      "duration_str": "1分06秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/5yA-03-ccZA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=5yA-03-ccZA"
+    },
+    {
+      "id": "_d3HJoqgO7Y",
+      "title": "自殺 若年層で増加続く　小中高生で2年連続過去最多　全体は減少",
+      "duration_sec": 37,
+      "duration_str": "0分37秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/_d3HJoqgO7Y/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=_d3HJoqgO7Y"
+    },
+    {
+      "id": "uo3gzNRfXbA",
+      "title": "経産省 サイバー攻撃対策にホワイトハッカーチーム編成へ 高性能AI活用し脆弱性確認",
+      "duration_sec": 28,
+      "duration_str": "0分28秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/uo3gzNRfXbA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=uo3gzNRfXbA"
+    },
+    {
+      "id": "bOQPSSMNJ8M",
+      "title": "iPhone初の折り畳み式「Duo」販売開始　36万円超も早朝から客の列",
+      "duration_sec": 38,
+      "duration_str": "0分38秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/bOQPSSMNJ8M/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=bOQPSSMNJ8M"
+    },
+    {
+      "id": "xOfqiUfEz0U",
+      "title": "9月全国消費者物価2.1％上昇　9カ月ぶり2％超",
+      "duration_sec": 49,
+      "duration_str": "0分49秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/xOfqiUfEz0U/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=xOfqiUfEz0U"
+    },
+    {
+      "id": "eIyG6vSoaMU",
+      "title": "米露ウクライナ3カ国で和平後の安保論議を　プーチン氏「複雑な状況を打開へ」",
+      "duration_sec": 51,
+      "duration_str": "0分51秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/eIyG6vSoaMU/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=eIyG6vSoaMU"
+    },
+    {
+      "id": "sMjnCItDL-Y",
+      "title": "トランプ氏  ウクライナのスターリンク制限解除を要請 ゼレンスキー氏「完全に回復していない」",
+      "duration_sec": 62,
+      "duration_str": "1分02秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/sMjnCItDL-Y/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=sMjnCItDL-Y"
+    },
+    {
+      "id": "5NyGCfs_Z7A",
+      "title": "モデルナ 株価↓25%超急落 情報漏えいか #モデルナ #ニューヨーク株式市場 #バイオ医薬品 #株価 #がんワクチン #情報漏えい #メルク",
+      "duration_sec": 44,
+      "duration_str": "0分44秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/5NyGCfs_Z7A/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=5NyGCfs_Z7A"
+    },
+    {
+      "id": "aBOySKzXRQM",
+      "title": "米アメリカン航空決算 燃料コスト↑7割で最終赤字【モーサテ】",
+      "duration_sec": 33,
+      "duration_str": "0分33秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/aBOySKzXRQM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=aBOySKzXRQM"
+    },
+    {
+      "id": "CRxOkPcdoHI",
+      "title": "米P&G決算 売上高 予想上回る【モーサテ】",
+      "duration_sec": 36,
+      "duration_str": "0分36秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/CRxOkPcdoHI/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=CRxOkPcdoHI"
+    },
+    {
+      "id": "ZV1MUdSkKoA",
+      "title": "イーロン･マスク氏 米スカイダンスに1500億円出資【モーサテ】",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/ZV1MUdSkKoA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ZV1MUdSkKoA"
+    },
+    {
+      "id": "_QRN-9wZ8tM",
+      "title": "米モデルナ 株価↓25%超急落 情報漏えいか【モーサテ】",
+      "duration_sec": 47,
+      "duration_str": "0分47秒",
+      "published_at": "2026-10-23",
+      "thumbnail_url": "https://i.ytimg.com/vi/_QRN-9wZ8tM/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=_QRN-9wZ8tM"
     }
   ],
   "visit_count": 6,
-  "is_cached": false
+  "is_cached": false,
+  "last_updated": "2026-10-25 08:56:51"
 }
