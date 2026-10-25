@@ -1,8 +1,10 @@
 import os
 import re
 import sys
+import json
 import time
 import datetime
+import subprocess
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -31,6 +33,54 @@ EXCLUDE_KEYWORDS = ["天気"]          # 「天気」を含む動画を除外
 MIN_PUBLISH_DATE_STR = "2026-10-01T00:00:00Z"  # 2026/10/01 以降の動画のみ対象
 MAX_PLAYLIST_CAPACITY = 500         # 再生リストの最大保持件数（500件）
 
+def run_interactive_oauth(flow, port=0):
+    """Google OAuth認証用のローカルサーバーを起動し、ブラウザを開いてトークンを取得します。"""
+    import wsgiref.simple_server
+    import webbrowser
+    from google_auth_oauthlib.flow import _RedirectWSGIApp, _ExclusiveWSGIServer, _WSGIRequestHandler
+
+    wsgi_app = _RedirectWSGIApp("認証が完了しました！ブラウザを閉じて元の画面にお戻りください。")
+    local_server = wsgiref.simple_server.make_server(
+        "localhost",
+        port,
+        wsgi_app,
+        server_class=_ExclusiveWSGIServer,
+        handler_class=_WSGIRequestHandler,
+    )
+
+    try:
+        flow.redirect_uri = f"http://localhost:{local_server.server_port}/"
+        auth_url, _ = flow.authorization_url(prompt='consent', access_type='offline')
+
+        print(f"\n========================================================", flush=True)
+        print(f"🔑 Google アカウント認証用URL:\n{auth_url}", flush=True)
+        print(f"========================================================\n", flush=True)
+
+        auth_file = os.path.join(SCRIPT_DIR, "last_auth_url.txt")
+        try:
+            with open(auth_file, "w", encoding="utf-8") as f:
+                f.write(auth_url)
+        except Exception:
+            pass
+
+        try:
+            os.startfile(auth_url)
+        except Exception:
+            try:
+                webbrowser.open(auth_url)
+            except Exception:
+                pass
+
+        print("ブラウザで Google アカウントの認証を行ってください（待機中...）", flush=True)
+        local_server.timeout = 180
+        local_server.handle_request()
+
+        authorization_response = wsgi_app.last_request_uri.replace("http", "https")
+        flow.fetch_token(authorization_response=authorization_response)
+        return flow.credentials
+    finally:
+        local_server.server_close()
+
 def get_youtube_service(allow_interactive=True):
     """OAuth認証を行い、YouTube APIサービスオブジェクトを取得します。"""
     creds = None
@@ -38,15 +88,16 @@ def get_youtube_service(allow_interactive=True):
         try:
             creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
         except Exception as e:
-            print(f"[警告] トークン読み込みエラー: {e}")
+            print(f"[警告] トークン読み込みエラー: {e}", flush=True)
             creds = None
 
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             try:
+                print("🔄 既存トークンの自動更新を試行中...", flush=True)
                 creds.refresh(Request())
             except Exception as e:
-                print(f"[警告] トークン再更新エラー: {e}。再認証を行います。")
+                print(f"[警告] トークン再更新エラー: {e}。再認証を行います。", flush=True)
                 creds = None
 
         if not creds or not creds.valid:
@@ -60,11 +111,12 @@ def get_youtube_service(allow_interactive=True):
                 except Exception:
                     pass
             flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
-            print("🔑 ブラウザを開いて Google アカウント認証を行います...")
-            creds = flow.run_local_server(port=0)
+            print("🔑 ブラウザを開いて Google アカウント認証を行います...", flush=True)
+            creds = run_interactive_oauth(flow)
 
         with open(TOKEN_FILE, "w", encoding="utf-8") as token:
             token.write(creds.to_json())
+        print("✓ 認証トークンを保存しました (token.json)", flush=True)
 
     return build("youtube", "v3", credentials=creds)
 
@@ -332,36 +384,143 @@ def main():
 
     if not matched_videos:
         print("\n追加対象の新しいニュース動画はありませんでした。")
-        return
-
-    print(f"\n[実行中] {len(matched_videos)} 件の動画を再生リスト 『{TARGET_PLAYLIST_NAME}』 に追加します...")
-    added_count = 0
-    for v in matched_videos:
-        time.sleep(0.5)
-        try:
-            youtube.playlistItems().insert(
-                part="snippet",
-                body={
-                    "snippet": {
-                        "playlistId": playlist_id,
-                        "resourceId": {
-                            "kind": "youtube#video",
-                            "videoId": v["id"]
+    else:
+        print(f"\n[実行中] {len(matched_videos)} 件の動画を再生リスト 『{TARGET_PLAYLIST_NAME}』 に追加します...")
+        added_count = 0
+        for v in matched_videos:
+            time.sleep(0.5)
+            try:
+                youtube.playlistItems().insert(
+                    part="snippet",
+                    body={
+                        "snippet": {
+                            "playlistId": playlist_id,
+                            "resourceId": {
+                                "kind": "youtube#video",
+                                "videoId": v["id"]
+                            }
                         }
                     }
-                }
-            ).execute()
-            print(f"  ✓ 追加完了 [{v['duration_str']}]: {v['title']}")
-            added_count += 1
-        except HttpError as e:
-            if "quotaExceeded" in str(e):
-                print("\n🛑 API本日の上限に達したため、残りの追加を中断します。")
-                break
-            else:
-                print(f"  ❌ 追加失敗: {v['title']} ({e})")
+                ).execute()
+                print(f"  ✓ 追加完了 [{v['duration_str']}]: {v['title']}")
+                added_count += 1
+            except HttpError as e:
+                if "quotaExceeded" in str(e):
+                    print("\n🛑 API本日の上限に達したため、残りの追加を中断します。")
+                    break
+                else:
+                    print(f"  ❌ 追加失敗: {v['title']} ({e})")
 
-    print(f"\n✨ 完了: {added_count} 件の短尺ニュースを 『{TARGET_PLAYLIST_NAME}』 に追加しました！")
+        print(f"\n✨ 完了: {added_count} 件の短尺ニュースを 『{TARGET_PLAYLIST_NAME}』 に追加しました！")
+
     print(f"🔗 共有用URL (限定公開): https://www.youtube.com/playlist?list={playlist_id}")
+
+    # 5. 最新キャッシュ (cached_news.json) の更新
+    print("\n--- Webサイト用最新ニュースキャッシュの生成 ---")
+    update_cached_news(youtube, playlist_id)
+
+    # 6. GitHub Pages への自動プッシュ
+    print("\n--- GitHub Pages への最新化同期 ---")
+    sync_git_repo()
+
+def update_cached_news(youtube, playlist_id):
+    """最新の再生リスト内容を取得して cached_news.json を更新します。"""
+    try:
+        items = fetch_playlist_items(youtube, playlist_id)
+        if not items:
+            return False
+
+        v_ids = [it["videoId"] for it in items]
+        details_map = {}
+        for i in range(0, len(v_ids), 50):
+            batch = v_ids[i:i+50]
+            v_res = youtube.videos().list(
+                part="snippet,contentDetails",
+                id=",".join(batch)
+            ).execute()
+            for item in v_res.get("items", []):
+                vid = item["id"]
+                dur_iso = item.get("contentDetails", {}).get("duration", "PT0S")
+                dur_sec = parse_iso8601_duration(dur_iso)
+                dur_str = format_seconds(dur_sec)
+                thumbs = item["snippet"].get("thumbnails", {})
+                thumb_url = thumbs.get("medium", {}).get("url", thumbs.get("default", {}).get("url", f"https://i.ytimg.com/vi/{vid}/mqdefault.jpg"))
+                details_map[vid] = {
+                    "duration_sec": dur_sec,
+                    "duration_str": dur_str,
+                    "published_at": item["snippet"].get("publishedAt", "")[:10],
+                    "thumbnail_url": thumb_url
+                }
+
+        videos = []
+        for it in items:
+            vid = it["videoId"]
+            det = details_map.get(vid, {})
+            videos.append({
+                "id": vid,
+                "title": it["title"],
+                "duration_sec": det.get("duration_sec", 0),
+                "duration_str": det.get("duration_str", "0分00秒"),
+                "published_at": det.get("published_at", ""),
+                "thumbnail_url": det.get("thumbnail_url", f"https://i.ytimg.com/vi/{vid}/mqdefault.jpg"),
+                "url": f"https://www.youtube.com/watch?v={vid}"
+            })
+
+        visit_count = 0
+        cache_file = os.path.join(SCRIPT_DIR, "cached_news.json")
+        if os.path.exists(cache_file):
+            try:
+                with open(cache_file, "r", encoding="utf-8") as f:
+                    old_data = json.load(f)
+                    visit_count = old_data.get("visit_count", 0)
+            except Exception:
+                pass
+
+        stats_file = os.path.join(SCRIPT_DIR, "visit_stats.json")
+        if os.path.exists(stats_file):
+            try:
+                with open(stats_file, "r", encoding="utf-8") as f:
+                    visit_count = max(visit_count, json.load(f).get("visit_count", 0))
+            except Exception:
+                pass
+
+        cache_data = {
+            "status": "success",
+            "playlist_id": playlist_id,
+            "playlist_url": f"https://www.youtube.com/playlist?list={playlist_id}",
+            "total_count": len(videos),
+            "videos": videos,
+            "visit_count": visit_count,
+            "is_cached": False,
+            "last_updated": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
+
+        with open(cache_file, "w", encoding="utf-8") as f:
+            json.dump(cache_data, f, ensure_ascii=False, indent=2)
+        print(f"✓ キャッシュファイル（cached_news.json）を {len(videos)} 件の動画で更新しました。", flush=True)
+        return True
+    except Exception as e:
+        print(f"⚠️ キャッシュ更新エラー: {e}", flush=True)
+        return False
+
+def sync_git_repo():
+    """GitHubリポジトリへの最新キャッシュのコミット＆プッシュを行います。"""
+    git_cmd = r"C:\Users\katad\AppData\Local\GitHubDesktop\app-3.6.7\resources\app\git\cmd\git.exe"
+    if not os.path.exists(git_cmd):
+        git_cmd = "git"
+    try:
+        status = subprocess.run([git_cmd, "status", "--porcelain"], cwd=SCRIPT_DIR, capture_output=True, text=True, check=True)
+        if "cached_news.json" in status.stdout:
+            print("📦 変更されたキャッシュデータを GitHub にプッシュします...", flush=True)
+            subprocess.run([git_cmd, "add", "cached_news.json"], cwd=SCRIPT_DIR, check=True)
+            commit_msg = f"Update news cache: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}"
+            subprocess.run([git_cmd, "commit", "-m", commit_msg], cwd=SCRIPT_DIR, check=True)
+            subprocess.run([git_cmd, "push", "origin", "main"], cwd=SCRIPT_DIR, check=True)
+            print("🚀 GitHub Pages への最新キャッシュ同期が完了しました！", flush=True)
+        else:
+            print("✓ GitHub リポジトリのキャッシュデータは最新です（変更なし）。", flush=True)
+    except Exception as e:
+        print(f"⚠️ Git同期スキップ: {e}", flush=True)
 
 if __name__ == "__main__":
     main()
