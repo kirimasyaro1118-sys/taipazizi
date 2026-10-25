@@ -538,7 +538,7 @@
 
     <div class="controls-bar">
       <label class="filter-toggle">
-        <input type="checkbox" id="hideWatchedToggle" onchange="renderGrid()">
+        <input type="checkbox" id="hideWatchedToggle" checked onchange="renderGrid()">
         <span>未視聴のみ表示</span>
       </label>
 
@@ -878,6 +878,10 @@
     }
 
     // Initialize
+    const filterToggle = document.getElementById('hideWatchedToggle');
+    if (filterToggle) {
+      filterToggle.checked = true;
+    }
     initCounter();
     fetchNews();
 
