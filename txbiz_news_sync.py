@@ -30,7 +30,8 @@ CHANNEL_QUERY = "テレ東BIZ ダイジェスト"
 TARGET_PLAYLIST_NAME = "テレ東短動画リスト"
 MAX_DURATION_SECONDS = 120          # 2分（120秒）以下
 EXCLUDE_KEYWORDS = ["天気"]          # 「天気」を含む動画を除外
-MIN_PUBLISH_DATE_STR = "2026-10-01T00:00:00Z"  # 2026/10/01 以降の動画のみ対象
+MIN_PUBLISH_DATE_STR = "2026-10-01T00:00:00Z"  # システム全体の最古基準日（10/01以降の動画を保持）
+SEARCH_SINCE_DATE_STR = "2026-10-21T00:00:00Z" # 探索対象期間（時短用: 10/21以降の新着を走査）
 MAX_PLAYLIST_CAPACITY = 500         # 再生リストの最大保持件数（500件）
 
 def run_interactive_oauth(flow, port=0):
@@ -322,41 +323,88 @@ def main():
         print("❌ アップロード再生リストが取得できませんでした。")
         return
 
-    res = youtube.playlistItems().list(
-        part="snippet",
-        playlistId=uploads_id,
-        maxResults=50
-    ).execute()
+    search_min_dt = datetime.datetime.fromisoformat(SEARCH_SINCE_DATE_STR.replace("Z", "+00:00"))
+    min_publish_dt = datetime.datetime.fromisoformat(MIN_PUBLISH_DATE_STR.replace("Z", "+00:00"))
+    recent_items = []
+    next_page_token = None
+    page_count = 0
 
-    recent_items = res.get("items", [])
+    print(f"\n📡 チャンネル新着動画を探索中（探索範囲: {SEARCH_SINCE_DATE_STR[:10]} 以降）...")
+    while True:
+        page_count += 1
+        res = youtube.playlistItems().list(
+            part="snippet",
+            playlistId=uploads_id,
+            maxResults=50,
+            pageToken=next_page_token
+        ).execute()
+
+        items = res.get("items", [])
+        if not items:
+            break
+
+        stop_paging = False
+        for item in items:
+            published_at_str = item["snippet"].get("publishedAt", "")
+            if published_at_str:
+                pub_dt = datetime.datetime.fromisoformat(published_at_str.replace("Z", "+00:00"))
+                if pub_dt < search_min_dt:
+                    stop_paging = True
+                    break
+            recent_items.append(item)
+
+        print(f"  - ページ {page_count}: {len(items)} 件チェック（対象候補: {len(recent_items)} 件）")
+
+        if stop_paging:
+            break
+
+        next_page_token = res.get("nextPageToken")
+        if not next_page_token:
+            break
+
     video_ids = [item["snippet"]["resourceId"]["videoId"] for item in recent_items]
     if not video_ids:
-        print("新着動画はありませんでした。")
+        print("対象の新着動画はありませんでした。")
         return
 
-    # 動画の詳細情報（再生時間、公開日時）を一括取得
-    vid_response = youtube.videos().list(
-        part="snippet,contentDetails",
-        id=",".join(video_ids)
-    ).execute()
+    # 動画の詳細情報（再生時間、公開日時）を50件ずつバッチ取得
+    details_map = {}
+    for i in range(0, len(video_ids), 50):
+        batch = video_ids[i:i+50]
+        vid_response = youtube.videos().list(
+            part="snippet,contentDetails",
+            id=",".join(batch)
+        ).execute()
+        for item in vid_response.get("items", []):
+            v_id = item["id"]
+            title = item["snippet"]["title"]
+            published_at_str = item["snippet"]["publishedAt"]
+            duration_iso = item.get("contentDetails", {}).get("duration", "PT0S")
+            duration_sec = parse_iso8601_duration(duration_iso)
+            duration_str = format_seconds(duration_sec)
+            details_map[v_id] = {
+                "title": title,
+                "published_at": published_at_str,
+                "duration_sec": duration_sec,
+                "duration_str": duration_str
+            }
 
-    min_publish_dt = datetime.datetime.fromisoformat(MIN_PUBLISH_DATE_STR.replace("Z", "+00:00"))
     matched_videos = []
-
     print("\n--- 新着動画チェック判定 ---")
-    for item in vid_response.get("items", []):
-        v_id = item["id"]
-        title = item["snippet"]["title"]
-        published_at_str = item["snippet"]["publishedAt"]
+    for v_id in video_ids:
+        info = details_map.get(v_id)
+        if not info:
+            continue
+
+        title = info["title"]
+        published_at_str = info["published_at"]
         published_dt = datetime.datetime.fromisoformat(published_at_str.replace("Z", "+00:00"))
+        duration_sec = info["duration_sec"]
+        duration_str = info["duration_str"]
 
-        duration_iso = item.get("contentDetails", {}).get("duration", "PT0S")
-        duration_sec = parse_iso8601_duration(duration_iso)
-        duration_str = format_seconds(duration_sec)
-
-        # 条件1: 2026/10/01 以降の動画か
-        if published_dt < min_publish_dt:
-            print(f"  ⏭️ スキップ (2026/10/01以前の動画: {published_at_str[:10]}): {title}")
+        # 条件1: 探索対象日（10/21）以降の動画か
+        if published_dt < search_min_dt:
+            print(f"  ⏭️ スキップ (探索対象日以前: {published_at_str[:10]}): {title}")
             continue
 
         # 条件2: すでに「ニュース」再生リストに存在するか
@@ -381,6 +429,9 @@ def main():
             "published_at": published_at_str
         })
         print(f"  🎯 追加対象ヒット! [{duration_str}] ({published_at_str[:10]}) {title}")
+
+    # 古い順に追加して再生リストの時系列順序を維持
+    matched_videos.reverse()
 
     if not matched_videos:
         print("\n追加対象の新しいニュース動画はありませんでした。")
