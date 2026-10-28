@@ -634,26 +634,60 @@
       // 1. この端末のアクセス数をカウント
       localVisits = parseInt(localStorage.getItem('txbiz_local_visits') || '0', 10) + 1;
       localStorage.setItem('txbiz_local_visits', localVisits.toString());
+
+      const cached = localStorage.getItem('txbiz_global_visits');
+      if (cached) {
+        totalVisits = parseInt(cached, 10);
+      }
       updateCounterDisplay();
 
-      // 2. メインAPI: Abacus Counter API (全アクセス数を世界規模で集約)
+      // 2. メインAPI: CountAPI (全アクセス数を世界規模で集約・高安定)
       try {
-        const res = await fetch('https://abacus.jasoncameron.dev/hit/katad-txbiz-news/pageviews');
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 4000);
+        const res = await fetch('https://countapi.mileshilliard.com/api/v1/hit/katad-taipazizi-visits', {
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
         if (res.ok) {
           const data = await res.json();
-          const count = data.value || data.count;
-          if (typeof count === 'number' && count > 0) {
+          const count = typeof data.value === 'number' ? data.value : data.count;
+          if (typeof count === 'number' && count >= 0) {
             totalVisits = count;
+            localStorage.setItem('txbiz_global_visits', count.toString());
             isCounterOnline = true;
             updateCounterDisplay();
             return;
           }
         }
       } catch(e) {
-        console.warn('Abacus Counter API failed:', e);
+        console.warn('CountAPI failed, trying secondary...', e);
       }
 
-      // 3. 通信エラー時のオフライン状態
+      // 3. サブAPI: Abacus Counter API (タイムアウト短縮対応)
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 2000);
+        const res = await fetch('https://abacus.jasoncameron.dev/hit/katad-txbiz-news/pageviews', {
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+        if (res.ok) {
+          const data = await res.json();
+          const count = data.value || data.count;
+          if (typeof count === 'number' && count >= 0) {
+            totalVisits = count;
+            localStorage.setItem('txbiz_global_visits', count.toString());
+            isCounterOnline = true;
+            updateCounterDisplay();
+            return;
+          }
+        }
+      } catch(e) {
+        console.warn('Secondary API failed:', e);
+      }
+
+      // 4. 通信エラー時のオフライン状態
       isCounterOnline = false;
       updateCounterDisplay();
     }
