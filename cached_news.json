@@ -2,386 +2,8 @@
   "status": "success",
   "playlist_id": "PLFWKlyTx2vW4",
   "playlist_url": "https://www.youtube.com/playlist?list=PLFWKlyTx2vW4",
-  "total_count": 542,
+  "total_count": 508,
   "videos": [
-    {
-      "id": "3HFHXqDxEuw",
-      "title": "FRB改修工事に不正なし",
-      "duration_sec": 46,
-      "duration_str": "0分46秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/3HFHXqDxEuw/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=3HFHXqDxEuw"
-    },
-    {
-      "id": "45hlhGxIlUs",
-      "title": "日銀短観　製造業景況感6期連続改善　AI関連けん引",
-      "duration_sec": 44,
-      "duration_str": "0分44秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/45hlhGxIlUs/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=45hlhGxIlUs"
-    },
-    {
-      "id": "9TgM-z_FA_k",
-      "title": "日銀9月会合の主な意見　物価上振れなら利上げ加速",
-      "duration_sec": 33,
-      "duration_str": "0分33秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/9TgM-z_FA_k/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=9TgM-z_FA_k"
-    },
-    {
-      "id": "_xk5zMsj5Yw",
-      "title": "サウジ当局が拘束した副操縦士の取り調べ進める ネタニヤフ首相「墜落図った」",
-      "duration_sec": 41,
-      "duration_str": "0分41秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/_xk5zMsj5Yw/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=_xk5zMsj5Yw"
-    },
-    {
-      "id": "ykoPE0DYwAY",
-      "title": "「イラン関与の強い兆候」英首相 米軍使用の空軍基地テロ準備事件",
-      "duration_sec": 36,
-      "duration_str": "0分36秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/ykoPE0DYwAY/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=ykoPE0DYwAY"
-    },
-    {
-      "id": "28HP7o-DE38",
-      "title": "ニデック新社長がトップ交代で陳謝「新体制で構造改革に取り組む」",
-      "duration_sec": 74,
-      "duration_str": "1分14秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/28HP7o-DE38/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=28HP7o-DE38"
-    },
-    {
-      "id": "wsTrBgklPVU",
-      "title": "米国防長官「自律戦闘軍」創設",
-      "duration_sec": 41,
-      "duration_str": "0分41秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/wsTrBgklPVU/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=wsTrBgklPVU"
-    },
-    {
-      "id": "syokuIMOsIE",
-      "title": "中国「国慶節」21億人超が移動ヘ　日本は人気圏外に",
-      "duration_sec": 27,
-      "duration_str": "0分27秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/syokuIMOsIE/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=syokuIMOsIE"
-    },
-    {
-      "id": "LeRlYNddQtU",
-      "title": "日本のAIインフラ整備加速へ　JERA が米英企業と提携 大規模データセンター建設に2.3兆円超投資",
-      "duration_sec": 33,
-      "duration_str": "0分33秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/LeRlYNddQtU/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=LeRlYNddQtU"
-    },
-    {
-      "id": "oFsw9jzI7Gk",
-      "title": "BS民放5社が4K配信開始",
-      "duration_sec": 30,
-      "duration_str": "0分30秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/oFsw9jzI7Gk/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=oFsw9jzI7Gk"
-    },
-    {
-      "id": "bZW6gnkfwtI",
-      "title": "東京都心で史上最長36日連続の雨",
-      "duration_sec": 44,
-      "duration_str": "0分44秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/bZW6gnkfwtI/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=bZW6gnkfwtI"
-    },
-    {
-      "id": "A2hyb3m4W5A",
-      "title": "酒税改正で税率が一本化 ビールは減税 発泡酒などは増税 ビール値下げで需要拡大なるか 初日の売り場を取材",
-      "duration_sec": 72,
-      "duration_str": "1分12秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/A2hyb3m4W5A/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=A2hyb3m4W5A"
-    },
-    {
-      "id": "Q_Ax5NIZlQ4",
-      "title": "飲食業界の救世主 テンポスバスターズ #カンブリア宮殿 #テンポスバスターズ #飲食店 #飲食業界",
-      "duration_sec": 83,
-      "duration_str": "1分23秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/Q_Ax5NIZlQ4/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Q_Ax5NIZlQ4"
-    },
-    {
-      "id": "MMjTor94Ss8",
-      "title": "カンブリア宮殿【統合のシナジー効果で躍進！　大江戸温泉物語の舞台裏】予告",
-      "duration_sec": 31,
-      "duration_str": "0分31秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/MMjTor94Ss8/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=MMjTor94Ss8"
-    },
-    {
-      "id": "Qtw1ueasgZ8",
-      "title": "フラット35 金利3.83％ 現行制度で最高更新【WBS】",
-      "duration_sec": 28,
-      "duration_str": "0分28秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/Qtw1ueasgZ8/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Qtw1ueasgZ8"
-    },
-    {
-      "id": "k1E0TMyO5rk",
-      "title": "新卒初任給 最大47万円 ノジマ 即戦力に狙い【WBS】",
-      "duration_sec": 29,
-      "duration_str": "0分29秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/k1E0TMyO5rk/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=k1E0TMyO5rk"
-    },
-    {
-      "id": "piMDcFMCX6U",
-      "title": "AIインフラに2兆円超 JERAと海外2社【WBS】",
-      "duration_sec": 33,
-      "duration_str": "0分33秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/piMDcFMCX6U/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=piMDcFMCX6U"
-    },
-    {
-      "id": "yRGJHbVhFTM",
-      "title": "ベリリウム年間100トン量産へ 核融合発電向け【WBS】",
-      "duration_sec": 26,
-      "duration_str": "0分26秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/yRGJHbVhFTM/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=yRGJHbVhFTM"
-    },
-    {
-      "id": "OFi5YNxG4jA",
-      "title": "米長期金利が一時5.34％台 24年半ぶり高水準【モーサテ】",
-      "duration_sec": 44,
-      "duration_str": "0分44秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/OFi5YNxG4jA/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=OFi5YNxG4jA"
-    },
-    {
-      "id": "_p4iH_ZFadM",
-      "title": "トランプ政権 禁輸措置も 欧州に軽油在庫放出を要求【モーサテ】",
-      "duration_sec": 45,
-      "duration_str": "0分45秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/_p4iH_ZFadM/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=_p4iH_ZFadM"
-    },
-    {
-      "id": "8jVZVUa4qbo",
-      "title": "米製造業景況感わずかに低下 物価は大幅上昇【モーサテ】",
-      "duration_sec": 32,
-      "duration_str": "0分32秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/8jVZVUa4qbo/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=8jVZVUa4qbo"
-    },
-    {
-      "id": "WbaMqkYtjpM",
-      "title": "米人員削減数↓20％ 失業保険申請も減少【モーサテ】",
-      "duration_sec": 30,
-      "duration_str": "0分30秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/WbaMqkYtjpM/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=WbaMqkYtjpM"
-    },
-    {
-      "id": "Ly27AASi_38",
-      "title": "米ナイキ売上高 予想下回る 中華圏で苦戦続く【モーサテ】",
-      "duration_sec": 36,
-      "duration_str": "0分36秒",
-      "published_at": "2026-10-01",
-      "thumbnail_url": "https://i.ytimg.com/vi/Ly27AASi_38/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Ly27AASi_38"
-    },
-    {
-      "id": "21oHg9ZMUy8",
-      "title": "トランプ政権 欧州に軽油在庫放出を要求 #原油 #原油高 #軽油 #軽油価格 #軽油備蓄在庫 #トランプ政権 #EU #ヨーロッパ",
-      "duration_sec": 44,
-      "duration_str": "0分44秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/21oHg9ZMUy8/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=21oHg9ZMUy8"
-    },
-    {
-      "id": "U8aw0JlT8N0",
-      "title": "米が中東に3隻目空母と約1万人の兵士派遣　供給懸念でNY原油先物が続伸",
-      "duration_sec": 61,
-      "duration_str": "1分01秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/U8aw0JlT8N0/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=U8aw0JlT8N0"
-    },
-    {
-      "id": "T5eGxN_rqmA",
-      "title": "自民・小野寺元防衛大臣に無人機協力要請 ウクライナ大統領が会談",
-      "duration_sec": 68,
-      "duration_str": "1分08秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/T5eGxN_rqmA/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=T5eGxN_rqmA"
-    },
-    {
-      "id": "ckqb1HeBcm4",
-      "title": "9月　東京都区部の消費者物価指数　2.7％の上昇　2％超は8カ月ぶり",
-      "duration_sec": 44,
-      "duration_str": "0分44秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/ckqb1HeBcm4/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=ckqb1HeBcm4"
-    },
-    {
-      "id": "qRRsCAthiq8",
-      "title": "プーチン氏　11月の米中露首脳会談に意欲　実現は「習近平氏次第」",
-      "duration_sec": 38,
-      "duration_str": "0分38秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/qRRsCAthiq8/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=qRRsCAthiq8"
-    },
-    {
-      "id": "fP6hgksP6zQ",
-      "title": "アクセンチュア6－8月期決算　増収増益で市場予想を上回る　AI代替懸念が緩和",
-      "duration_sec": 38,
-      "duration_str": "0分38秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/fP6hgksP6zQ/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=fP6hgksP6zQ"
-    },
-    {
-      "id": "KH702UmyUAU",
-      "title": "8月完全失業率2.5％　5カ月ぶりの悪化",
-      "duration_sec": 34,
-      "duration_str": "0分34秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/KH702UmyUAU/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=KH702UmyUAU"
-    },
-    {
-      "id": "JTeYy_6PPno",
-      "title": "東海汽船に初の使用停止命令  酒気帯び勤務など 国交省",
-      "duration_sec": 69,
-      "duration_str": "1分09秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/JTeYy_6PPno/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=JTeYy_6PPno"
-    },
-    {
-      "id": "QFt_UXXJ0vc",
-      "title": "簗農水大臣の道路予算“大幅カット”　事実関係を国交省が調査　簗大臣は「コメント控える」10回以上",
-      "duration_sec": 72,
-      "duration_str": "1分12秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/QFt_UXXJ0vc/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=QFt_UXXJ0vc"
-    },
-    {
-      "id": "PfICkVvnmSg",
-      "title": "高市総理とカタール首相が会談　ホルムズ海峡の安全航行に向け連携",
-      "duration_sec": 40,
-      "duration_str": "0分40秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/PfICkVvnmSg/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=PfICkVvnmSg"
-    },
-    {
-      "id": "y35GGl72wHE",
-      "title": "福岡県議会・樋口明県議が新たに証言ゴルフ会などの費用を負担",
-      "duration_sec": 60,
-      "duration_str": "1分00秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/y35GGl72wHE/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=y35GGl72wHE"
-    },
-    {
-      "id": "2F4y_-XrR0c",
-      "title": "GPSの届かない地下などで屋内ナビ　日本橋エリアで初実装",
-      "duration_sec": 68,
-      "duration_str": "1分08秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/2F4y_-XrR0c/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=2F4y_-XrR0c"
-    },
-    {
-      "id": "6hbSlBmRTn0",
-      "title": "アメリカ 中国 ロシア  力の時代到来か #アメリカ #中国 #ロシア #侵攻 #垂秀夫 #池畑修平",
-      "duration_sec": 63,
-      "duration_str": "1分03秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/6hbSlBmRTn0/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=6hbSlBmRTn0"
-    },
-    {
-      "id": "qEhTCWscYWM",
-      "title": "ガイアの夜明け【地方の“うまい”を売る！～ニッポンの「食」が大進化～】予告",
-      "duration_sec": 31,
-      "duration_str": "0分31秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/qEhTCWscYWM/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=qEhTCWscYWM"
-    },
-    {
-      "id": "wAoLh5pVPYg",
-      "title": "プルデンシャル 一部停止へ 金銭詐取問題で行政処分【WBS】",
-      "duration_sec": 40,
-      "duration_str": "0分40秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/wAoLh5pVPYg/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=wAoLh5pVPYg"
-    },
-    {
-      "id": "Woa0sA3WEiU",
-      "title": "「誤解招く発言」簗大臣が釈明　“予算カット報道”【WBS】",
-      "duration_sec": 38,
-      "duration_str": "0分38秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/Woa0sA3WEiU/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Woa0sA3WEiU"
-    },
-    {
-      "id": "_4TVU60w9BQ",
-      "title": "東海汽船に初の使用停止命令　飲酒問題で処分【WBS】",
-      "duration_sec": 33,
-      "duration_str": "0分33秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/_4TVU60w9BQ/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=_4TVU60w9BQ"
-    },
-    {
-      "id": "Rkjz4kuoYbI",
-      "title": "石油1億バレル放出提案 仏が提案 G7首脳が協議へ【WBS】",
-      "duration_sec": 41,
-      "duration_str": "0分41秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/Rkjz4kuoYbI/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Rkjz4kuoYbI"
-    },
-    {
-      "id": "Cc6zSnWc87c",
-      "title": "韓国で「検察庁」を廃止　政治介入を抑止【WBS】",
-      "duration_sec": 37,
-      "duration_str": "0分37秒",
-      "published_at": "2026-10-02",
-      "thumbnail_url": "https://i.ytimg.com/vi/Cc6zSnWc87c/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Cc6zSnWc87c"
-    },
     {
       "id": "tTOfW6-b5Sw",
       "title": "G7首脳会合 合計1億バレルの軽油・原油備蓄放出を決定",
@@ -4811,6 +4433,78 @@
       "url": "https://www.youtube.com/watch?v=HawDNxibbGA"
     },
     {
+      "id": "ns1W4UsHwDw",
+      "title": "記者即時解放を強く要求 5年ぶり日露外相会談で",
+      "duration_sec": 71,
+      "duration_str": "1分11秒",
+      "published_at": "2026-10-31",
+      "thumbnail_url": "https://i.ytimg.com/vi/ns1W4UsHwDw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ns1W4UsHwDw"
+    },
+    {
+      "id": "OWGL9X_O6BE",
+      "title": "トランプ大統領 一転 日曜日の選挙集会参加へ",
+      "duration_sec": 63,
+      "duration_str": "1分03秒",
+      "published_at": "2026-10-31",
+      "thumbnail_url": "https://i.ytimg.com/vi/OWGL9X_O6BE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=OWGL9X_O6BE"
+    },
+    {
+      "id": "2cGF8JStsXE",
+      "title": "露ウクライナ代表団が ウクライナ南部ロシア占領地入り 物資を供給 住民避難開始",
+      "duration_sec": 43,
+      "duration_str": "0分43秒",
+      "published_at": "2026-10-31",
+      "thumbnail_url": "https://i.ytimg.com/vi/2cGF8JStsXE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=2cGF8JStsXE"
+    },
+    {
+      "id": "GMptMzk6OFA",
+      "title": "米露外相会談 米中露3カ国首脳会談へ調整",
+      "duration_sec": 48,
+      "duration_str": "0分48秒",
+      "published_at": "2026-10-31",
+      "thumbnail_url": "https://i.ytimg.com/vi/GMptMzk6OFA/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=GMptMzk6OFA"
+    },
+    {
+      "id": "yBs9ztHY1q8",
+      "title": "中国景況感 2カ月ぶり節目の50を下回る",
+      "duration_sec": 29,
+      "duration_str": "0分29秒",
+      "published_at": "2026-10-31",
+      "thumbnail_url": "https://i.ytimg.com/vi/yBs9ztHY1q8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=yBs9ztHY1q8"
+    },
+    {
+      "id": "du42MAq0W5w",
+      "title": "殉職警察官などを追悼 総理「安全安心に力尽くす」",
+      "duration_sec": 31,
+      "duration_str": "0分31秒",
+      "published_at": "2026-10-31",
+      "thumbnail_url": "https://i.ytimg.com/vi/du42MAq0W5w/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=du42MAq0W5w"
+    },
+    {
+      "id": "5e2qGMaQqQs",
+      "title": "インテル 株価一時↓20%超 #インテル #決算 #黒字 #データセンター #AI",
+      "duration_sec": 53,
+      "duration_str": "0分53秒",
+      "published_at": "2026-10-31",
+      "thumbnail_url": "https://i.ytimg.com/vi/5e2qGMaQqQs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=5e2qGMaQqQs"
+    },
+    {
+      "id": "0eKo2tBi5JE",
+      "title": "三菱鉛筆 クルトガシリーズ #カンブリア宮殿 #三菱鉛筆 #クルトガ #シャーペン",
+      "duration_sec": 41,
+      "duration_str": "0分41秒",
+      "published_at": "2026-10-31",
+      "thumbnail_url": "https://i.ytimg.com/vi/0eKo2tBi5JE/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=0eKo2tBi5JE"
+    },
+    {
       "id": "hdbX80plSRI",
       "title": "Private video",
       "duration_sec": 0,
@@ -4885,5 +4579,5 @@
   ],
   "visit_count": 0,
   "is_cached": false,
-  "last_updated": "2026-10-31 18:01:33"
+  "last_updated": "2026-11-01 18:01:39"
 }
