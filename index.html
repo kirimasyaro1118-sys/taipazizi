@@ -571,12 +571,18 @@
       <div class="secret-sub-stats">
         <div class="secret-sub-card">
           <label>💻 この端末のアクセス数</label>
-          <span id="secretLocalCount">ー</span>
+          <span id="secretLocalCount">0 回</span>
         </div>
         <div class="secret-sub-card">
           <label>🔒 統計サーバー状態</label>
           <span id="secretStatus" style="color: var(--success); font-size: 0.85rem; font-weight: 700;">同期中...</span>
         </div>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 14px;">
+        <button class="btn-small" onclick="resetAccessCountsToZero()" style="width: 100%; border-color: var(--txbiz-red-border); color: var(--txbiz-red);">
+          🔄 アクセス数を 0 にリセット
+        </button>
       </div>
 
       <p class="secret-footer-note">
@@ -589,13 +595,15 @@
     let allVideos = [];
     let playlistId = 'PLFWKlyTx2vW4';
     const WATCHED_KEY = 'txbiz_watched_videos_v1';
+    const COUNTER_RESET_VERSION = '20261112_v2';
     
     // Secret Counter Variables
     let tvClickCount = 0;
     let tvClickTimer = null;
-    let totalVisits = null;
+    let totalVisits = 0;
     let localVisits = 0;
     let isCounterOnline = false;
+    let globalCounterOffset = 0;
 
     function handleTvIconClick() {
       tvClickCount++;
@@ -631,34 +639,60 @@
     }
 
     async function initCounter() {
-      // 1. この端末のアクセス数をカウント
-      localVisits = parseInt(localStorage.getItem('txbiz_local_visits') || '0', 10) + 1;
+      // リセットバージョンの確認（新しくリセットされた場合は端末内データを0に初期化）
+      const savedVersion = localStorage.getItem('txbiz_counter_version');
+      let isJustReset = false;
+      if (savedVersion !== COUNTER_RESET_VERSION) {
+        localStorage.setItem('txbiz_counter_version', COUNTER_RESET_VERSION);
+        localStorage.setItem('txbiz_local_visits', '0');
+        localStorage.setItem('txbiz_global_visits', '0');
+        localStorage.removeItem('txbiz_global_offset');
+        isJustReset = true;
+      }
+
+      globalCounterOffset = parseInt(localStorage.getItem('txbiz_global_offset') || '0', 10);
+
+      // 1. この端末のアクセス数をカウント（リセット直後の初回表示は0回とする）
+      if (isJustReset) {
+        localVisits = 0;
+      } else {
+        localVisits = parseInt(localStorage.getItem('txbiz_local_visits') || '0', 10) + 1;
+      }
       localStorage.setItem('txbiz_local_visits', localVisits.toString());
 
       const cached = localStorage.getItem('txbiz_global_visits');
-      if (cached) {
-        totalVisits = parseInt(cached, 10);
+      if (cached !== null) {
+        totalVisits = Math.max(0, parseInt(cached, 10) - globalCounterOffset);
       }
       updateCounterDisplay();
+
+      // リセット直後の初回は外部APIもヒットさせず現在値(0)として扱う
+      const action = isJustReset ? 'get' : 'hit';
 
       // 2. メインAPI: CountAPI (全アクセス数を世界規模で集約・高安定)
       try {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 4000);
-        const res = await fetch('https://countapi.mileshilliard.com/api/v1/hit/katad-taipazizi-visits', {
+        const res = await fetch(`https://countapi.mileshilliard.com/api/v1/${action}/katad-taipazizi-visits-v2`, {
           signal: controller.signal
         });
         clearTimeout(timeoutId);
         if (res.ok) {
           const data = await res.json();
-          const count = typeof data.value === 'number' ? data.value : data.count;
-          if (typeof count === 'number' && count >= 0) {
-            totalVisits = count;
-            localStorage.setItem('txbiz_global_visits', count.toString());
+          const rawCount = typeof data.value === 'number' ? data.value : (typeof data.count === 'number' ? data.count : 0);
+          if (typeof rawCount === 'number' && rawCount >= 0) {
+            localStorage.setItem('txbiz_global_visits', rawCount.toString());
+            totalVisits = Math.max(0, rawCount - globalCounterOffset);
             isCounterOnline = true;
             updateCounterDisplay();
             return;
           }
+        } else if (isJustReset) {
+          // まだキーが存在しない場合は0回として正常扱い
+          totalVisits = 0;
+          isCounterOnline = true;
+          updateCounterDisplay();
+          return;
         }
       } catch(e) {
         console.warn('CountAPI failed, trying secondary...', e);
@@ -668,20 +702,28 @@
       try {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 2000);
-        const res = await fetch('https://abacus.jasoncameron.dev/hit/katad-txbiz-news/pageviews', {
+        const subEndpoint = isJustReset
+          ? 'https://abacus.jasoncameron.dev/get/katad-txbiz-news-v2/pageviews'
+          : 'https://abacus.jasoncameron.dev/hit/katad-txbiz-news-v2/pageviews';
+        const res = await fetch(subEndpoint, {
           signal: controller.signal
         });
         clearTimeout(timeoutId);
         if (res.ok) {
           const data = await res.json();
-          const count = data.value || data.count;
-          if (typeof count === 'number' && count >= 0) {
-            totalVisits = count;
-            localStorage.setItem('txbiz_global_visits', count.toString());
+          const rawCount = typeof data.value === 'number' ? data.value : (typeof data.count === 'number' ? data.count : 0);
+          if (typeof rawCount === 'number' && rawCount >= 0) {
+            localStorage.setItem('txbiz_global_visits', rawCount.toString());
+            totalVisits = Math.max(0, rawCount - globalCounterOffset);
             isCounterOnline = true;
             updateCounterDisplay();
             return;
           }
+        } else if (isJustReset) {
+          totalVisits = 0;
+          isCounterOnline = true;
+          updateCounterDisplay();
+          return;
         }
       } catch(e) {
         console.warn('Secondary API failed:', e);
@@ -692,23 +734,33 @@
       updateCounterDisplay();
     }
 
+    function resetAccessCountsToZero() {
+      const rawGlobal = parseInt(localStorage.getItem('txbiz_global_visits') || '0', 10);
+      globalCounterOffset = rawGlobal;
+      localStorage.setItem('txbiz_global_offset', globalCounterOffset.toString());
+      localStorage.setItem('txbiz_local_visits', '0');
+      localVisits = 0;
+      totalVisits = 0;
+      updateCounterDisplay();
+    }
+
     function updateCounterDisplay() {
       const globalEl = document.getElementById('secretGlobalCount');
       const localEl = document.getElementById('secretLocalCount');
       const statusEl = document.getElementById('secretStatus');
 
       if (globalEl) {
-        if (typeof totalVisits === 'number' && totalVisits > 0) {
+        if (typeof totalVisits === 'number' && totalVisits >= 0) {
           globalEl.innerText = totalVisits.toLocaleString() + ' 回';
         } else if (isCounterOnline) {
-          globalEl.innerText = '集計中...';
+          globalEl.innerText = '0 回';
         } else {
-          globalEl.innerText = (localVisits ? localVisits.toLocaleString() + ' 回 (端末内)' : 'ー');
+          globalEl.innerText = (localVisits !== null ? localVisits.toLocaleString() + ' 回 (端末内)' : '0 回');
         }
       }
 
       if (localEl) {
-        localEl.innerText = (localVisits || 1).toLocaleString() + ' 回';
+        localEl.innerText = (typeof localVisits === 'number' ? localVisits : 0).toLocaleString() + ' 回';
       }
 
       if (statusEl) {
