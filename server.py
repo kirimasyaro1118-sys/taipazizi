@@ -74,6 +74,9 @@ class NewsWebHandler(SimpleHTTPRequestHandler):
                 items = sync.fetch_playlist_items(youtube, playlist_id)
 
                 if items:
+                    items = [it for it in items if not sync.is_unavailable_video_title(it.get("title", ""))]
+                    if len(items) > sync.MAX_PLAYLIST_CAPACITY:
+                        items = items[-sync.MAX_PLAYLIST_CAPACITY:]
                     v_ids = [it["videoId"] for it in items]
                     details_map = {}
                     for i in range(0, len(v_ids), 50):
@@ -99,7 +102,9 @@ class NewsWebHandler(SimpleHTTPRequestHandler):
                     videos = []
                     for it in items:
                         vid = it["videoId"]
-                        det = details_map.get(vid, {})
+                        det = details_map.get(vid)
+                        if not det or det.get("duration_sec", 0) <= 0:
+                            continue
                         videos.append({
                             "id": vid,
                             "title": it["title"],

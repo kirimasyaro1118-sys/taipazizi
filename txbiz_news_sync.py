@@ -31,7 +31,7 @@ TARGET_PLAYLIST_NAME = "テレ東短動画リスト"
 MAX_DURATION_SECONDS = 120          # 2分（120秒）以下
 EXCLUDE_KEYWORDS = ["天気"]          # 「天気」を含む動画を除外
 MIN_PUBLISH_DATE_STR = "2026-10-01T00:00:00Z"  # システム全体の最古基準日（10/01以降の動画を保持）
-SEARCH_SINCE_DATE_STR = "2026-10-21T00:00:00Z" # 探索対象期間（時短用: 10/21以降の新着を走査）
+SEARCH_SINCE_DATE_STR = "2026-11-05T00:00:00Z" # 探索対象期間（時短用: 11/05以降の新着を走査）
 MAX_PLAYLIST_CAPACITY = 500         # 再生リストの最大保持件数（500件）
 
 def run_interactive_oauth(flow, port=0):
@@ -261,25 +261,67 @@ def fetch_playlist_items(youtube, playlist_id):
             raise e
     return items
 
-def cleanup_playlist_capacity(youtube, playlist_id):
-    """再生リストの件数が500件を超えている場合、古い動画から順番に自動削除します。"""
+def is_unavailable_video_title(title):
+    """非公開・削除済み動画のタイトルかどうかを判定します。"""
+    if not title:
+        return True
+    t = title.strip().lower()
+    return t in ("private video", "deleted video", "[private video]", "[deleted video]")
+
+def cleanup_playlist_capacity(youtube, playlist_id, incoming_count=0):
+    """
+    1. 再生リスト内の非公開・削除済み動画（Private video / Deleted video）を優先的に自動削除します。
+    2. 再生リストの件数（＋追加予定件数 incoming_count）が500件を超える場合、古い動画から順番に自動削除します。
+    """
     items = fetch_playlist_items(youtube, playlist_id)
     if not items:
-        return
+        return []
 
-    if len(items) > MAX_PLAYLIST_CAPACITY:
-        excess = len(items) - MAX_PLAYLIST_CAPACITY
-        print(f"\n⚠️ 再生リストの件数 ({len(items)}件) が最大容量 ({MAX_PLAYLIST_CAPACITY}件) を超えています。")
+    # 1. 非公開・削除済み動画の自動掃除
+    unavailable_items = [it for it in items if is_unavailable_video_title(it.get("title", ""))]
+    remaining_items = [it for it in items if not is_unavailable_video_title(it.get("title", ""))]
+
+    if unavailable_items:
+        print(f"\n🧹 再生リスト内の非公開・削除済み動画 ({len(unavailable_items)}件) を自動削除します...")
+        for item in unavailable_items:
+            try:
+                youtube.playlistItems().delete(id=item["playlistItemId"]).execute()
+                print(f"  - 削除（非公開・削除済み動画）: {item['title']} (videoId: {item['videoId']})")
+                time.sleep(0.3)
+            except HttpError as e:
+                if "quotaExceeded" in str(e):
+                    raise e
+                print(f"  ❌ 削除失敗: {item['title']} ({e})")
+            except Exception as e:
+                print(f"  ❌ 削除失敗: {item['title']} ({e})")
+
+    # 2. 500件容量上限（追加予定件数を含む）のチェックと古い動画の削除
+    target_max = max(0, MAX_PLAYLIST_CAPACITY - incoming_count)
+    if len(remaining_items) > target_max:
+        excess = len(remaining_items) - target_max
+        if incoming_count > 0:
+            print(f"\n⚠️ 現在の有効件数 ({len(remaining_items)}件) + 新規追加予定 ({incoming_count}件) が最大容量 ({MAX_PLAYLIST_CAPACITY}件) を超えるため、")
+        else:
+            print(f"\n⚠️ 再生リストの件数 ({len(remaining_items)}件) が最大容量 ({MAX_PLAYLIST_CAPACITY}件) を超えています。")
         print(f"古い動画から {excess} 件を自動削除します...")
 
-        old_items_to_delete = items[:excess]
+        old_items_to_delete = remaining_items[:excess]
+        deleted_count = 0
         for item in old_items_to_delete:
             try:
                 youtube.playlistItems().delete(id=item["playlistItemId"]).execute()
-                print(f"  - 削除（500件容量上限超過）: {item['title']}")
+                print(f"  - 削除（500件容量上限調整）: {item['title']}")
+                deleted_count += 1
                 time.sleep(0.3)
+            except HttpError as e:
+                if "quotaExceeded" in str(e):
+                    raise e
+                print(f"  ❌ 削除失敗: {item['title']} ({e})")
             except Exception as e:
                 print(f"  ❌ 削除失敗: {item['title']} ({e})")
+        remaining_items = remaining_items[deleted_count:]
+
+    return remaining_items
 
 def main():
     print("=" * 65)
@@ -303,9 +345,9 @@ def main():
             return
         raise e
 
-    # 2. 40件上限超過分の古い動画整理
+    # 2. 非公開動画の掃除 ＆ 500件上限超過分の古い動画整理（と同時に既存登録動画リストを取得）
     try:
-        cleanup_playlist_capacity(youtube, playlist_id)
+        existing_items = cleanup_playlist_capacity(youtube, playlist_id)
     except HttpError as e:
         if "quotaExceeded" in str(e):
             print("🛑 本日の API 利用上限 (10,000 units) に達しました。本日16時以降に再開されます。")
@@ -314,7 +356,6 @@ def main():
         raise e
 
     # 3. 既存の登録動画IDリストを取得（重複防止用）
-    existing_items = fetch_playlist_items(youtube, playlist_id)
     existing_video_ids = {item["videoId"] for item in existing_items}
 
     # 4. 「テレ東BIZ ダイジェスト」の新着動画を取得
@@ -433,9 +474,23 @@ def main():
     # 古い順に追加して再生リストの時系列順序を維持
     matched_videos.reverse()
 
+    if len(matched_videos) > MAX_PLAYLIST_CAPACITY:
+        matched_videos = matched_videos[-MAX_PLAYLIST_CAPACITY:]
+
     if not matched_videos:
         print("\n追加対象の新しいニュース動画はありませんでした。")
     else:
+        # 追加によって500件を超えないよう、追加予定件数分の枠を先に空ける
+        try:
+            cleanup_playlist_capacity(youtube, playlist_id, incoming_count=len(matched_videos))
+        except HttpError as e:
+            if "quotaExceeded" in str(e):
+                print("\n🛑 API本日の上限に達したため、容量調整および追加を中断します。")
+                matched_videos = []
+            else:
+                raise e
+
+    if matched_videos:
         print(f"\n[実行中] {len(matched_videos)} 件の動画を再生リスト 『{TARGET_PLAYLIST_NAME}』 に追加します...")
         added_count = 0
         for v in matched_videos:
@@ -464,6 +519,15 @@ def main():
 
         print(f"\n✨ 完了: {added_count} 件の短尺ニュースを 『{TARGET_PLAYLIST_NAME}』 に追加しました！")
 
+        # 追加完了後にも最終チェックを行い、確実に500件以内に収める
+        try:
+            cleanup_playlist_capacity(youtube, playlist_id)
+        except HttpError as e:
+            if "quotaExceeded" in str(e):
+                print("⚠️ 追加後の最終容量チェック時にAPI上限に達しました（次回実行時に整理されます）。")
+            else:
+                print(f"⚠️ 追加後の最終容量チェックエラー: {e}")
+
     print(f"🔗 共有用URL (限定公開): https://www.youtube.com/playlist?list={playlist_id}")
 
     # 5. 最新キャッシュ (cached_news.json) の更新
@@ -480,6 +544,11 @@ def update_cached_news(youtube, playlist_id):
         items = fetch_playlist_items(youtube, playlist_id)
         if not items:
             return False
+
+        # 非公開・削除済み動画を除外し、万が一500件を超えていた場合も最新500件に制限
+        items = [it for it in items if not is_unavailable_video_title(it.get("title", ""))]
+        if len(items) > MAX_PLAYLIST_CAPACITY:
+            items = items[-MAX_PLAYLIST_CAPACITY:]
 
         v_ids = [it["videoId"] for it in items]
         details_map = {}
@@ -506,7 +575,10 @@ def update_cached_news(youtube, playlist_id):
         videos = []
         for it in items:
             vid = it["videoId"]
-            det = details_map.get(vid, {})
+            det = details_map.get(vid)
+            # videos().list で情報が取得できない動画（後から非公開・削除された動画）は除外
+            if not det or det.get("duration_sec", 0) <= 0:
+                continue
             videos.append({
                 "id": vid,
                 "title": it["title"],
